@@ -18,6 +18,10 @@ body{
 .descripcion{
     font-size: 16px;
 }
+.msj-uno{
+    
+    text-align-last: center
+}
 
 .icons-footer{
     color: black;
@@ -25,23 +29,26 @@ body{
     
 }
 
-.azul-icon{
-    color: #1259c3;
-    height: 2em;
-    font-size: 20px;
-    margin-top: 10px;
-    width: 100px;
-box-sizing: border-box;
-border: solid #1259c3 1px;
-padding: 5px;
-margin: 10px;
-align-items: center;
-  
+.menu{
+    text-align-last: center;
+    display: block;
+    height: 28px;
+    font-size: large;   
 }
 
-.menu{
-    align-items: center;
-    align-items: center;
+.azul-icon{
+    color: #1259c3;
+   
+}
+
+.azules{
+    size: 2em;
+    margin: 10px;
+    text-align-last: center;
+}
+
+.abajo{
+    text-align-last: center;
 }
 
 ul {
@@ -50,12 +57,6 @@ ul {
         list-style-position: inside;
 
 }
-
-.menu{
-display: flex;
-
-}
-
 
 
 
