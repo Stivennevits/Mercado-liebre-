@@ -1,62 +1,164 @@
+
+
+/*BODY*/
+*{
+    box-sizing: border-box;
+}
+
 body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    background-color: #ebebeb;
+    font-family: 'Roboto';
+    margin: 0px;
+    padding: 0%;
+}
+
+/*HEADER*/
+
+header{
+    width: 100vw;
     background-color: #EAC926;
+}
+
+header .imagen-logo{
+    width: 40%;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.input-header{
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+div.search-icon i{
+    margin-top: 1px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    background-color: #ebebeb;;
+    padding: 1px;
+    border-color: #666;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+.compra-cuotas{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+ul.opciones-header{
+    list-style-type: none;
+    padding-left: 0%;
+    font-size: 12px;
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.burguer-menu i{
+    background-color: #1259c3;
+    color: #ebebeb;
+    padding: 11px;
+    margin-left: 45%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+/*MAIN*/
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+.banner{
+    width: 100vw;
+}
+
+h3.titulares{
+    font-size: 24px;
+    color: #666;
+}
+
+article{
+    width: 90%;
+    margin: 10px;  
+}
+
+main div.detalle-producto{
+    border: solid 1px #ebebeb;
+    background-color: white;
+    padding: 15px;
+}
+
+main div.truck-icon{
+    color: green;
+    font-size: 24px;
+}
+
+img.img-producto{
+    width: 100%;
+}
+
+p.precios{
+    font-size: 18px;
+    margin-bottom: 0%;
+}
+
+p.descuentos{
+    font-size: 16px;
+    color: green;
     margin: 0%;
 }
 
-
-.titulares{
-    font-size: 24px;
-    
-}
-
-.precios{
-    font-size: 18px;
-}
-
-.descripcion{
+p.descripcion{
     font-size: 16px;
 }
-.msj-uno{
-    
-    text-align-last: center
+
+/*FOOTER*/
+
+footer{
+    margin: 5px;
+    background-color: white;
+    color: #666;
 }
 
-.icons-footer{
-    color: black;
-    
-    
+section.footer-options{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.menu{
-    text-align-last: center;
-    display: block;
-    height: 28px;
-    font-size: large;   
-}
-
-.azul-icon{
+.footer-icon{
     color: #1259c3;
-   
+    font-size: 24px;
+    padding-bottom: 0%;
+    padding-top: 30px;
 }
 
-.azules{
-    size: 2em;
-    margin: 10px;
-    text-align-last: center;
+section.footer-options h3{
+    font-size: 18px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    
 }
 
-.abajo{
-    text-align-last: center;
+section.footer-options p{
+    font-size: 12px;
+    margin-top: 0%;
 }
 
-ul {
-  
-        text-align: left;
-        list-style-position: inside;
-
+footer .copyrigth{
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
-
-
-
