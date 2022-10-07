@@ -3,6 +3,7 @@
 /*BODY*/
 *{
     box-sizing: border-box;
+    
 }
 
 body{
@@ -18,107 +19,183 @@ header{
     width: 100vw;
     background-color: #EAC926;
 }
-
+header .encabezado{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 header .imagen-logo{
-    width: 40%;
+    width: 45%;
     margin-top: 30px;
     margin-left: 30px;
+}
+header div.barra{
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+    width: 45%;
+    height: 4%;
+    padding: 34px 0px 4px 2px;
 }
 
 .input-header{
     width: 50%;
-    margin-top: 15px;
-    margin-left: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-grow: 0.75;
 }
 
-div.search-icon i{
-    margin-top: 1px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    background-color: #ebebeb;;
-    padding: 1px;
-    border-color: #666;
-    border-style: solid;
-    border-width: 0.5px;
+button .icons-footer{
+    background-color: #FFF;
+    flex-grow: 1;
+    
 }
 
 .compra-cuotas{
     text-align: center;
     margin-bottom: 20px;
     font-size: 12px;
+    padding: 18px 0px 0px 0px;
+    width: 90%;
 }
 
-ul.opciones-header{
-    list-style-type: none;
-    padding-left: 0%;
-    font-size: 12px;
+#listas{
+    align-items: flex-start;
+    margin: 0px;
+    padding-left: 20px;
+    
+}
+
+header nav{
+    display: none;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 header nav ul a{
     text-decoration: none;
     color: black;
+    font-size: 12px;
+    display: inline-block;
 }
 
+ul.opciones-lista{
+    
+    padding-left: 0%;
+    font-size: 12px;
+}
+.burguer-menu{
+    box-sizing: border-box;
+    padding: 0px 0px 28px;
+}
 .burguer-menu i{
     background-color: #1259c3;
     color: #ebebeb;
-    padding: 11px;
-    margin-left: 45%;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    display: block;
+    padding: 15px;
+    max-width: 50px;
+    text-align: center;
+    margin: auto;
     border-radius: 10px;
     font-size: 24px;
 }
 
 /*MAIN*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 main{
     width: 90%;
     margin: auto;
+    padding: 10px;
 }
 
 .banner{
     width: 100vw;
+    height: 28vw;
+    margin: 0px;
+    padding: 0px;
 }
 
 h3.titulares{
     font-size: 24px;
     color: #666;
+    display: inline-flex;
 }
 
-article{
+article.articulo{
     width: 90%;
-    margin: 10px;  
+    margin: 10px; 
+    position: block;
+
+    
 }
 
 main div.detalle-producto{
+    box-sizing: content-box;
     border: solid 1px #ebebeb;
     background-color: white;
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+    
 }
 
-main div.truck-icon{
-    color: green;
-    font-size: 24px;
+main article div.truck-icon{
+    display: block;
+    font-size: 16px;
+    color: #39b54a;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+
 }
 
 img.img-producto{
     width: 100%;
+    align-items: center;
+    
 }
 
 p.precios{
     font-size: 18px;
     margin-bottom: 0%;
+    flex-grow: 0.30%;
+    
 }
 
 p.descuentos{
     font-size: 16px;
     color: green;
     margin: 0%;
+    flex-grow: 0.70%;
+    
 }
 
 p.descripcion{
     font-size: 16px;
+    display: none;
+    
+}
+
+#info{
+    justify-content: space-around;
+    display: inline-flex;
+    white-space: break-spaces;
+    padding: 5px;
+    margin: 0px;
 }
 
 /*FOOTER*/
@@ -139,9 +216,9 @@ section.footer-options{
 
 .footer-icon{
     color: #1259c3;
-    font-size: 24px;
+    font-size: 2em;
     padding-bottom: 0%;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 section.footer-options h3{
@@ -161,4 +238,199 @@ footer .copyrigth{
     text-align: left;
     padding-bottom: 10px;
     padding-left: 10px;
+}
+
+@media screen and (min-width: 481px){
+    /*tablet */
+    header .encabezado{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header .imagen-logo{
+        width: 32%;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    header div.barra{
+        display: flex;
+        justify-content: normal;
+        align-items: end;
+        width: 30%;
+        padding: 0px 0px 0px 16px;
+    }
+    .input-header{
+        display: flex;
+        width: 70%;
+        margin-top: 0px;
+        margin-left: 0px;
+        flex-grow: 0.75;
+    }
+    
+    button .icons-footer{
+        background-color: #FFF;
+        flex-grow: 1;
+        
+    }
+    
+    .compra-cuotas{
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 12px;
+        padding: 18px 0px 0px 0px;
+        width: 30%;
+    }
+    p.descripcion{
+        font-size: 16px;
+        display: block;           
+        }
+
+    main div.detalle-producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        display: block;
+       }
+
+    img.img-producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        display: block;
+       }
+    header nav{
+        display: flex;
+        padding-bottom: 30px;
+    }   
+    .burguer-menu i{
+        display: none;
+    }
+    .opciones-lista{
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px 15px;
+    } 
+    .opciones-lista ul{
+        display: flex;
+    }
+    .opciones-lista li{
+        margin: 0 5px;
+    }
+    main .titulares{
+        padding: 72px 15px 32px;
+    }
+    main section.section-article-basado{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    article.articulo{
+        width: 45%;
+         
+    }
+    main section.section-article-oferta{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }  
+    
+       
+    
+ 
+}
+
+@media screen and (min-width: 769px) {
+    /* desktop */
+    
+    header .encabezado{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header .imagen-logo{
+        width: 32%;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    header div.barra{
+        display: flex;
+        justify-content: normal;
+        align-items: end;
+        width: 30%;
+        padding: 0px 0px 0px 16px;
+    }
+    .input-header{
+        display: flex;
+        width: 70%;
+        margin-top: 0px;
+        margin-left: 0px;
+        flex-grow: 0.75;
+    }
+    
+    button .icons-footer{
+        background-color: #FFF;
+        flex-grow: 1;
+        
+    }
+    
+    .compra-cuotas{
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 12px;
+        padding: 18px 0px 0px 0px;
+        width: 33%;
+    }
+    p.descripcion{
+        font-size: 16px;
+        display: block;   
+     }
+     main div.detalle-producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+       }
+
+    img.img-producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        display: flex;
+       }
+    header nav{
+        display: flex;
+        padding-bottom: 30px;
+       } 
+    .burguer-menu i{
+        display: none;
+        }
+    .opciones-lista{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px 15px;
+    }    
+    .opciones-lista ul{
+        display: flex;
+    }
+    .opciones-lista li{
+        margin: 0 5px;
+    }
+    main section.section-article-basado{
+        
+        display: flex;
+            
+        }
+    article.articulo{
+            width: 22%;
+             
+        }
+
+    main section.section-article-oferta{
+        
+            display: flex;
+    }     
+        
+    
+   
+    
+   
+    
 }
