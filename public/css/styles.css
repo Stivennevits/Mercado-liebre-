@@ -162,6 +162,10 @@ main article div.truck-icon{
     top: -15px;
 
 }
+main article div.truck-icon :hover{
+    transform: rotate(-90deg);
+    transition-duration: 3s;
+}
 
 img.img-producto{
     width: 100%;
@@ -188,6 +192,9 @@ p.descripcion{
     font-size: 16px;
     display: none;
     
+}
+p.descripcion :hover{
+    opacity:100%
 }
 
 #info{
@@ -240,6 +247,58 @@ footer .copyrigth{
     padding-left: 10px;
 }
 
+   /* formulario register*/
+   .register-form{
+    margin: 22px;
+    border-radius: 47px;
+    padding: 65px 50px 52px 32px;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gainsboro;
+}   
+.control-formulario{
+    margin-bottom: 15px;
+    color: black;
+}
+.control-formulario label{
+    margin-bottom: 15px;
+    display: block;
+    
+}
+
+.control{
+     width: 100%;
+     padding: 4px 4px;
+     border-radius: 8px;
+}
+.botoncitos{
+    display: flex;
+    justify-content: space-around;
+}
+.boton-formulario{
+    background-color: #39b54a;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #ebebeb;
+    padding: 5px 10px;
+}
+.listota{
+    display: block;
+}
+
+/* login - register*/
+
+.login-form{
+    margin: 22px;
+    border-radius: 47px;
+    padding: 65px 50px 52px 32px;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gainsboro;
+}
+
 @media screen and (min-width: 481px){
     /*tablet */
     header .encabezado{
@@ -289,7 +348,8 @@ footer .copyrigth{
 
     main div.detalle-producto{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        display: block;
+        
+        
        }
 
     img.img-producto{
@@ -335,9 +395,42 @@ footer .copyrigth{
         justify-content: space-around;
     }  
     
-       
+       /* formulario register*/
+    .register-form{
+        margin: 90px;
+        border-radius: 47px;
+        padding: 65px 50px 52px 32px;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: gainsboro;
+    }   
+    .control-formulario{
+        margin-bottom: 15px;
+        color: black;
+    }
+    .control-formulario label{
+        margin-bottom: 15px;
+        display: block;
+        
+    }
     
- 
+    .control{
+         width: 100%;
+         padding: 4px 4px;
+         border-radius: 8px;
+    }
+    .botoncitos{
+        display: flex;
+        justify-content: space-around;
+    }
+    .boton-formulario{
+        background-color: #39b54a;
+        border-radius: 2px;
+        font-size: 15px;
+        color: #ebebeb;
+        padding: 5px 10px;
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -428,7 +521,42 @@ footer .copyrigth{
             display: flex;
     }     
         
+       /* formulario register*/
+       .register-form{
+        margin: 90px;
+        border-radius: 47px;
+        padding: 65px 50px 52px 32px;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: gainsboro;
+    }   
+    .control-formulario{
+        margin-bottom: 15px;
+        color: black;
+    }
+    .control-formulario label{
+        margin-bottom: 15px;
+        display: block;
+        
+    }
     
+    .control{
+         width: 100%;
+         padding: 4px 4px;
+         border-radius: 8px;
+    }
+    .botoncitos{
+        display: flex;
+        justify-content: space-around;
+    }
+    .boton-formulario{
+        background-color: #39b54a;
+        border-radius: 2px;
+        font-size: 15px;
+        color: #ebebeb;
+        padding: 5px 10px;
+    }
    
     
    

@@ -15,7 +15,30 @@
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
- 
+    <header>
+        <section class="encabezado">
+            <img class="imagen-logo" src="img/logo-mercado-liebre.svg" />
+              <div class="barra"><input type="text" class="input-header" placeholder="buscar productos, marcas">
+               <button><div class="lupita"> <i class="fa-solid fa-magnifying-glass icons-footer"> </i></div></i> </button>
+                   </div>
+
+    </header>
+        <form action="/" method="GET" class="login-form">
+            <div class="control-formulario">
+                <label for="user-name">Nombre de Usuari@</label>
+                <input type="text" name="user-name" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
+              </div> 
+            
+              <div class="control-formulario">
+                <label for="contraseña">contraseña</label> 
+                <input type="password" name="contraseña" minlength="10" placeholder="Elige tu Contraseña" class="control">
+              </div> 
+              
+              <button type="submit" class="boton-formulario">Enviar</button >
+
+        </form>
+
+
     <footer>
         <section class="footer-options">
             <div class="footer-icon"><i class="fa-solid fa-credit-card"></i></div>

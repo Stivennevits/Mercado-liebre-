@@ -16,57 +16,61 @@
 </head>
 <body>
     <header>
+        <section class="encabezado">
+            <img class="imagen-logo" src="img/logo-mercado-liebre.svg" />
+              <div class="barra"><input type="text" class="input-header" placeholder="buscar productos, marcas">
+               <button><div class="lupita"> <i class="fa-solid fa-magnifying-glass icons-footer"> </i></div></i> </button>
+                   </div>
 
     </header>
 
-    <form action="/" method="GET">
-        <div>
+    <form action="/" method="GET" class="register-form">
+        <div class="control-formulario">
             <label for="nombre">Nombres y Apellidos</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombres y Apellidos">   
-          </div> <br>
-        <div>
+            <input type="text" name="nombre" id="nombre" minlength="5" placeholder="Nombres y Apellidos" class="control">   
+          </div> 
+        <div class="control-formulario">
             <label for="user-name">Nombre de Usuari@</label>
-            <input type="text" name="user-name" id="user-name" placeholder="Nombre de Usuari@">
-          </div> <br>
-        <div>
+            <input type="text" name="user-name" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
+          </div> 
+        <div class="control-formulario">
             <label for="fecha">Fecha De Nacimiento</label> 
-            <input type="date" name="fecha" id="fecha" placeholder="Fecha De Nacimiento">
-          </div> <br>
-        <div>
+            <input type="date" name="fecha" id="fecha" placeholder="Fecha De Nacimiento" class="control">
+          </div> 
+        <div class="control-formulario">
             <label for="Domicilio">Direccion de Domicilio</label> 
-            <input type="text" name="Domicilio" id="Domicilio" placeholder="Direccion de Domicilio">
-          </div> <br>
-        <div>
-            <label for="preferencia">Perfil de Usuario</label> <br> <br>
+            <input type="text" name="Domicilio" id="Domicilio" minlength="10" placeholder="Direccion de Domicilio" class="control">
+          </div> 
+        <div class="control-formulario">
+            <label for="preferencia">Perfil de Usuario</label>  
             <input type="radio" name="preferencia" value="Comprador"> Comprador 
             <input type="radio" name="preferencia" value="Vendedor" > Vendedor
-          </div> <br>
-        <div>
-            <label for="Intereses">Intereses</label> <br><br>
-            <input type="checkbox" name="Intereses" value="Electro"> Electro<br>
-            <input type="checkbox" name="Intereses" value="Moda"> Moda<br>
-            <input type="checkbox" name="Intereses" value="Hogar"> Hogar<br>
-            <input type="checkbox" name="Intereses" value="Jugueteria"> Jugueteria<br>
-            <input type="checkbox" name="Intereses" value="Vida Sana"> Vida Sana<br>
-          </div> <br>
-        <div>
+          </div> 
+        <div class="control-formulario">
+            <label for="Intereses" >Intereses</label> 
+            <input type="checkbox" name="Intereses" value="Electro" class="listota"> Electro
+            <input type="checkbox" name="Intereses" value="Moda" class="listota"> Moda
+            <input type="checkbox" name="Intereses" value="Hogar" class="listota"> Hogar
+            <input type="checkbox" name="Intereses" value="Jugueteria"class="listota"> Jugueteria
+            <input type="checkbox" name="Intereses" value="Vida Sana"class="listota"> Vida Sana
+          </div> 
+        <div class="control-formulario">
             <label for="picture">Foto de Perfil</label> 
             <input type="file" name="picture" accept=".jpg, .png">
-          </div> <br>
-        <div>
-            <label for="contraseña">contraseña</label> <br>
-            <input type="password" name="contraseña" placeholder="Elige tu Contraseña" >
-          </div> <br>
-        <div>
-            <label for="contraseña">Confirmar contraseña</label> <br>
-            <input type="password" name="contraseña" placeholder="Confirma tu Contraseña" >
-          </div> <br>
-        <div>    
-            <button type="submit">Enviar</button>
-         </div> <br>
-         <div>    
-            <button type="reset">Borrar</button>
-         </div> <br>
+          </div> 
+        <div class="control-formulario">
+            <label for="contraseña">contraseña</label> 
+            <input type="password" name="contraseña" minlength="10" placeholder="Elige tu Contraseña" class="control">
+          </div> 
+        <div class="control-formulario">
+            <label for="contraseña">Confirmar contraseña</label> 
+            <input type="password" name="contraseña" minlength="10" placeholder="Confirma tu Contraseña" class="control">
+          </div> 
+            <div class="botoncitos">
+            <button type="submit" class="boton-formulario">Enviar</button >
+            <button type="reset" class="boton-formulario">Borrar</button >
+            </div>
+         
 
     </form>
     <footer>
