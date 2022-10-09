@@ -1,98 +1,371 @@
-
-
 /*BODY*/
-*{
-    box-sizing: border-box;
-    
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #ebebeb;
-    font-family: 'Roboto';
-    margin: 0px;
-    padding: 0%;
+body {
+  background-color: #ebebeb;
+  font-family: "Roboto";
+  margin: 0px;
+  padding: 0%;
 }
 
 /*HEADER*/
 
-header{
-    width: 100vw;
-    background-color: #EAC926;
+header {
+  width: 100vw;
+  background-color: #eac926;
 }
-header .encabezado{
+header .encabezado {
+  width: 100vw;
+  background-color: #eac926;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header .imagen-logo {
+  width: 45%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+header div.barra {
+  display: flex;
+  justify-content: normal;
+  align-items: end;
+  width: 45%;
+  height: 4%;
+  padding: 34px 0px 4px 2px;
+}
+
+.input-header {
+  width: 50%;
+  margin-top: 0px;
+  margin-left: 0px;
+  flex-grow: 0.75;
+}
+
+button .icons-footer {
+  background-color: #fff;
+  flex-grow: 1;
+}
+
+.compra-cuotas {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 18px 0px 0px 0px;
+  width: 90%;
+}
+
+#listas {
+  align-items: flex-start;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+header nav {
+  display: none;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  display: inline-block;
+}
+
+ul.opciones-lista {
+  padding-left: 0%;
+  font-size: 12px;
+}
+.burguer-menu {
+  box-sizing: border-box;
+  padding: 0px 0px 28px;
+}
+.burguer-menu i {
+  background-color: #1259c3;
+  color: #ebebeb;
+  display: block;
+  padding: 15px;
+  max-width: 50px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+/*MAIN*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.banner {
+  width: 100vw;
+  height: 28vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3.titulares {
+  font-size: 24px;
+  color: #666;
+  display: inline-flex;
+}
+
+article.articulo {
+  width: 90%;
+  margin: 10px;
+  position: block;
+}
+
+main div.detalle-producto {
+  box-sizing: content-box;
+  border: solid 1px #ebebeb;
+  background-color: white;
+  padding: 15px 15px 15px 15px;
+  position: relative;
+}
+
+main article div.truck-icon {
+  display: block;
+  font-size: 16px;
+  color: #39b54a;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+main article div.truck-icon :hover {
+  transform: rotate(-90deg);
+  transition-duration: 3s;
+}
+
+img.img-producto {
+  width: 100%;
+  align-items: center;
+}
+
+p.precios {
+  font-size: 18px;
+  margin-bottom: 0%;
+  flex-grow: 0.3%;
+}
+
+p.descuentos {
+  font-size: 16px;
+  color: green;
+  margin: 0%;
+  flex-grow: 0.7%;
+}
+
+p.descripcion {
+  font-size: 16px;
+  display: none;
+}
+p.descripcion :hover {
+  opacity: 100%;
+}
+
+#info {
+  justify-content: space-around;
+  display: inline-flex;
+  white-space: break-spaces;
+  padding: 5px;
+  margin: 0px;
+}
+
+/*FOOTER*/
+
+footer {
+  margin: 5px;
+  background-color: white;
+  color: #666;
+}
+
+section.footer-options { 
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer-icon {
+  color: #1259c3;
+  font-size: 2em;
+  padding-bottom: 0%;
+  padding-top: 10px;
+}
+
+section.footer-options h3 {
+  font-size: 18px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+section.footer-options p {
+  font-size: 12px;
+  margin-top: 0%;
+}
+
+footer .copyrigth {
+  font-size: 12px;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* formulario register*/
+.register-form {
+  margin: 22px;
+  border-radius: 47px;
+  padding: 65px 50px 52px 32px;
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: gainsboro;
+}
+.control-formulario {
+  margin-bottom: 15px;
+  color: black;
+}
+.control-formulario label {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.control {
+  width: 100%;
+  padding: 4px 4px;
+  border-radius: 8px;
+}
+.botoncitos {
+  display: flex;
+  justify-content: space-around;
+}
+.boton-formulario {
+  background-color: #39b54a;
+  border-radius: 2px;
+  font-size: 15px;
+  color: #ebebeb;
+  padding: 5px 10px;
+}
+.boton-formulario:hover{
+    background-color: #0022AA;
+  }
+.listota {
+  display: block;
+}
+
+/* login - register*/
+
+.login-form {
+  margin: 22px;
+  border-radius: 47px;
+  padding: 65px 50px 52px 32px;
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: gainsboro;
+}
+
+@media screen and (min-width: 481px) {
+  /*tablet */
+  header {
+    width: 100vw;
+    background-color: #eac926;
+  }
+  header .encabezado {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-header .imagen-logo{
+    align-items: center;
+  }
+  header .imagen-logo {
     width: 45%;
     margin-top: 30px;
     margin-left: 30px;
-}
-header div.barra{
+  }
+  header div.barra {
     display: flex;
     justify-content: normal;
     align-items: end;
     width: 45%;
     height: 4%;
     padding: 34px 0px 4px 2px;
-}
+  }
 
-.input-header{
+  .input-header {
     width: 50%;
     margin-top: 0px;
     margin-left: 0px;
     flex-grow: 0.75;
-}
+  }
 
-button .icons-footer{
-    background-color: #FFF;
+  button .icons-footer {
+    background-color: #fff;
     flex-grow: 1;
-    
-}
+  }
 
-.compra-cuotas{
+  .compra-cuotas {
     text-align: center;
     margin-bottom: 20px;
     font-size: 12px;
     padding: 18px 0px 0px 0px;
     width: 90%;
-}
+  }
 
-#listas{
+  #listas {
     align-items: flex-start;
     margin: 0px;
     padding-left: 20px;
-    
-}
+  }
 
-header nav{
+  header nav {
     display: none;
-}
+  }
 
-header nav ul {
+  header nav ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
-}
+  }
 
-header nav ul a{
+  header nav ul a {
     text-decoration: none;
     color: black;
     font-size: 12px;
     display: inline-block;
-}
+  }
 
-ul.opciones-lista{
-    
+  ul.opciones-lista {
     padding-left: 0%;
     font-size: 12px;
-}
-.burguer-menu{
+  }
+  .burguer-menu {
     box-sizing: border-box;
     padding: 0px 0px 28px;
-}
-.burguer-menu i{
+  }
+  .burguer-menu i {
     background-color: #1259c3;
     color: #ebebeb;
     display: block;
@@ -102,463 +375,314 @@ ul.opciones-lista{
     margin: auto;
     border-radius: 10px;
     font-size: 24px;
-}
+  }
+  header .imagen-logo {
+    width: 32%;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  header div.barra {
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+    width: 30%;
+    padding: 0px 0px 0px 16px;
+  }
+  .input-header {
+    display: flex;
+    width: 70%;
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-grow: 0.75;
+  }
 
-/*MAIN*/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+  button .icons-footer {
+    background-color: #fff;
+    flex-grow: 1;
+  }
 
-main{
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-}
-
-.banner{
-    width: 100vw;
-    height: 28vw;
-    margin: 0px;
-    padding: 0px;
-}
-
-h3.titulares{
-    font-size: 24px;
-    color: #666;
-    display: inline-flex;
-}
-
-article.articulo{
-    width: 90%;
-    margin: 10px; 
-    position: block;
-
-    
-}
-
-main div.detalle-producto{
-    box-sizing: content-box;
-    border: solid 1px #ebebeb;
-    background-color: white;
-    padding: 15px 15px 15px 15px;
-    position: relative;
-    
-}
-
-main article div.truck-icon{
-    display: block;
-    font-size: 16px;
-    color: #39b54a;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-
-}
-main article div.truck-icon :hover{
-    transform: rotate(-90deg);
-    transition-duration: 3s;
-}
-
-img.img-producto{
-    width: 100%;
-    align-items: center;
-    
-}
-
-p.precios{
-    font-size: 18px;
-    margin-bottom: 0%;
-    flex-grow: 0.30%;
-    
-}
-
-p.descuentos{
-    font-size: 16px;
-    color: green;
-    margin: 0%;
-    flex-grow: 0.70%;
-    
-}
-
-p.descripcion{
-    font-size: 16px;
-    display: none;
-    
-}
-p.descripcion :hover{
-    opacity:100%
-}
-
-#info{
-    justify-content: space-around;
-    display: inline-flex;
-    white-space: break-spaces;
-    padding: 5px;
-    margin: 0px;
-}
-
-/*FOOTER*/
-
-footer{
-    margin: 5px;
-    background-color: white;
-    color: #666;
-}
-
-section.footer-options{
+  .compra-cuotas {
+    display: flex;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.footer-icon{
-    color: #1259c3;
-    font-size: 2em;
-    padding-bottom: 0%;
-    padding-top: 10px;
-}
-
-section.footer-options h3{
-    font-size: 18px;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    
-}
-
-section.footer-options p{
+    margin-bottom: 20px;
     font-size: 12px;
-    margin-top: 0%;
-}
+    padding: 18px 0px 0px 0px;
+    width: 30%;
+  }
 
-footer .copyrigth{
-    font-size: 12px;
-    text-align: left;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
+  p.descripcion {
+    font-size: 16px;
+    display: block;
+    color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+  }
+  p.descripcion:hover {
+    background-color: white;
+    color: #666;
+  }
 
-   /* formulario register*/
-   .register-form{
-    margin: 22px;
+  img.img-producto {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    display: block;
+  }
+
+  header nav {
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .burguer-menu i {
+    display: none;
+  }
+  .opciones-lista {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 15px;
+  }
+  .opciones-lista ul {
+    display: flex;
+  }
+  .opciones-lista li {
+    margin: 0 5px;
+  }
+  main .titulares {
+    padding: 72px 15px 32px;
+  }
+  main section.section-article-basado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  article.articulo {
+    width: 45%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  article.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  main section.section-article-oferta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /* formulario register*/
+  .register-form {
+    margin: 90px;
     border-radius: 47px;
     padding: 65px 50px 52px 32px;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: gainsboro;
-}   
-.control-formulario{
+  }
+  .control-formulario {
     margin-bottom: 15px;
     color: black;
-}
-.control-formulario label{
+  }
+  .control-formulario label {
     margin-bottom: 15px;
     display: block;
-    
-}
+  }
 
-.control{
-     width: 100%;
-     padding: 4px 4px;
-     border-radius: 8px;
-}
-.botoncitos{
+  .control {
+    width: 100%;
+    padding: 4px 4px;
+    border-radius: 8px;
+  }
+  .botoncitos {
     display: flex;
     justify-content: space-around;
-}
-.boton-formulario{
+  }
+  .boton-formulario {
     background-color: #39b54a;
     border-radius: 2px;
     font-size: 15px;
     color: #ebebeb;
     padding: 5px 10px;
+  }
+  .boton-formulario:hover{
+    background-color: #0022AA;
+  }
 }
-.listota{
+
+@media screen and (min-width: 769px) {
+  /* desktop */
+  header {
+    width: 100vw;
+    background-color: #eac926;
+  }
+  header .encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .imagen-logo {
+    width: 32%;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  header div.barra {
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+    width: 30%;
+    padding: 0px 0px 0px 16px;
+  }
+  .input-header {
+    display: flex;
+    width: 70%;
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-grow: 0.75;
+  }
+
+  button .icons-footer {
+    background-color: #fff;
+    flex-grow: 1;
+  }
+
+  .compra-cuotas {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    padding: 18px 0px 0px 0px;
+    width: 33%;
+  }
+  p.descripcion {
+    font-size: 16px;
     display: block;
-}
+    color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+  }
+  p.descripcion:hover {
+    background-color: white;
+    color: #666;
+  }
+  main div.detalle-producto {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
 
-/* login - register*/
+  img.img-producto {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+  }
+  header nav {
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .burguer-menu i {
+    display: none;
+  }
+  .opciones-lista {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 15px;
+  }
+  .opciones-lista ul {
+    display: flex;
+  }
+  .opciones-lista li {
+    margin: 0 5px;
+  }
+  main section.section-article-basado {
+    display: flex;
+  }
+  article.articulo {
+    width: 22%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  article.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
 
-.login-form{
-    margin: 22px;
+  main section.section-article-oferta {
+    display: flex;
+  }
+  section.footer-options { 
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  section.footer-options div.parte-uno{
+    background-color: white;
+    margin: 5px;
+    display: block;
+  }
+  .footer-titulo{
+    display: block;
+    align-items: center;
+    
+  }
+  .parrafo-footer{
+    display: block;
+    align-items: center;
+    
+  }
+  .footer-icon {
+    color: #1259c3;
+    font-size: 2em;
+    padding-bottom: 0%;
+    padding-top: 10px;
+  }
+  .footer-icon:hover{
+    color: #eac926;
+  }
+  footer .copyrigth{
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  /* formulario register*/
+  .register-form {
+    margin: 90px;
     border-radius: 47px;
     padding: 65px 50px 52px 32px;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: gainsboro;
-}
+  }
+  .control-formulario {
+    margin-bottom: 15px;
+    color: black;
+  }
+  .control-formulario label {
+    margin-bottom: 15px;
+    display: block;
+  }
 
-@media screen and (min-width: 481px){
-    /*tablet */
-    header .encabezado{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    header .imagen-logo{
-        width: 32%;
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-    header div.barra{
-        display: flex;
-        justify-content: normal;
-        align-items: end;
-        width: 30%;
-        padding: 0px 0px 0px 16px;
-    }
-    .input-header{
-        display: flex;
-        width: 70%;
-        margin-top: 0px;
-        margin-left: 0px;
-        flex-grow: 0.75;
-    }
+  .control {
+    width: 100%;
+    padding: 4px 4px;
+    border-radius: 8px;
+  }
+  .botoncitos {
+    display: flex;
+    justify-content: space-around;
+  }
+  .boton-formulario {
+    background-color: #39b54a;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #ebebeb;
+    padding: 5px 10px;
     
-    button .icons-footer{
-        background-color: #FFF;
-        flex-grow: 1;
-        
-    }
-    
-    .compra-cuotas{
-        display: flex;
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 12px;
-        padding: 18px 0px 0px 0px;
-        width: 30%;
-    }
-    p.descripcion{
-        font-size: 16px;
-        display: block;           
-        }
-
-    main div.detalle-producto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        
-        
-       }
-
-    img.img-producto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        display: block;
-       }
-    header nav{
-        display: flex;
-        padding-bottom: 30px;
-    }   
-    .burguer-menu i{
-        display: none;
-    }
-    .opciones-lista{
-        
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 15px 15px;
-    } 
-    .opciones-lista ul{
-        display: flex;
-    }
-    .opciones-lista li{
-        margin: 0 5px;
-    }
-    main .titulares{
-        padding: 72px 15px 32px;
-    }
-    main section.section-article-basado{
-        
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    article.articulo{
-        width: 45%;
-         
-    }
-    main section.section-article-oferta{
-        
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }  
-    
-       /* formulario register*/
-    .register-form{
-        margin: 90px;
-        border-radius: 47px;
-        padding: 65px 50px 52px 32px;
-        display: grid;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: gainsboro;
-    }   
-    .control-formulario{
-        margin-bottom: 15px;
-        color: black;
-    }
-    .control-formulario label{
-        margin-bottom: 15px;
-        display: block;
-        
-    }
-    
-    .control{
-         width: 100%;
-         padding: 4px 4px;
-         border-radius: 8px;
-    }
-    .botoncitos{
-        display: flex;
-        justify-content: space-around;
-    }
-    .boton-formulario{
-        background-color: #39b54a;
-        border-radius: 2px;
-        font-size: 15px;
-        color: #ebebeb;
-        padding: 5px 10px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    /* desktop */
-    
-    header .encabezado{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    header .imagen-logo{
-        width: 32%;
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-    header div.barra{
-        display: flex;
-        justify-content: normal;
-        align-items: end;
-        width: 30%;
-        padding: 0px 0px 0px 16px;
-    }
-    .input-header{
-        display: flex;
-        width: 70%;
-        margin-top: 0px;
-        margin-left: 0px;
-        flex-grow: 0.75;
-    }
-    
-    button .icons-footer{
-        background-color: #FFF;
-        flex-grow: 1;
-        
-    }
-    
-    .compra-cuotas{
-        display: flex;
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 12px;
-        padding: 18px 0px 0px 0px;
-        width: 33%;
-    }
-    p.descripcion{
-        font-size: 16px;
-        display: block;   
-     }
-     main div.detalle-producto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-       }
-
-    img.img-producto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        display: flex;
-       }
-    header nav{
-        display: flex;
-        padding-bottom: 30px;
-       } 
-    .burguer-menu i{
-        display: none;
-        }
-    .opciones-lista{
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 15px 15px;
-    }    
-    .opciones-lista ul{
-        display: flex;
-    }
-    .opciones-lista li{
-        margin: 0 5px;
-    }
-    main section.section-article-basado{
-        
-        display: flex;
-            
-        }
-    article.articulo{
-            width: 22%;
-             
-        }
-
-    main section.section-article-oferta{
-        
-            display: flex;
-    }     
-        
-       /* formulario register*/
-       .register-form{
-        margin: 90px;
-        border-radius: 47px;
-        padding: 65px 50px 52px 32px;
-        display: grid;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: gainsboro;
-    }   
-    .control-formulario{
-        margin-bottom: 15px;
-        color: black;
-    }
-    .control-formulario label{
-        margin-bottom: 15px;
-        display: block;
-        
-    }
-    
-    .control{
-         width: 100%;
-         padding: 4px 4px;
-         border-radius: 8px;
-    }
-    .botoncitos{
-        display: flex;
-        justify-content: space-around;
-    }
-    .boton-formulario{
-        background-color: #39b54a;
-        border-radius: 2px;
-        font-size: 15px;
-        color: #ebebeb;
-        padding: 5px 10px;
-    }
-   
-    
-   
-    
+  }
+  .boton-formulario:hover{
+    background-color: #0022AA;
+  }
 }
