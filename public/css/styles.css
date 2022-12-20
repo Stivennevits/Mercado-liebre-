@@ -22,6 +22,8 @@ header .encabezado {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: fixed;
+  z-index: 1;
 }
 header .imagen-logo {
   width: 45%;
@@ -116,7 +118,7 @@ main {
 .banner {
   width: 100vw;
   height: 28vw;
-  margin: 0px;
+  margin: 164px 0px 0px 0px;
   padding: 0px;
 }
 
@@ -295,10 +297,13 @@ footer .copyrigth {
     background-color: #eac926;
   }
   header .encabezado {
+    width: 100vw;
+    background-color: #eac926;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    position: fixed;
+    z-index: 1;
   }
   header .imagen-logo {
     width: 45%;
@@ -513,10 +518,13 @@ footer .copyrigth {
     background-color: #eac926;
   }
   header .encabezado {
+    width: 100vw;
+    background-color: #eac926;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    position: fixed;
+    z-index: 1;
   }
   header .imagen-logo {
     width: 32%;
