@@ -8,14 +8,19 @@ const PORT = process.env.PORT || 4020
 let rutasMain = require("./routers/main");
 let rutasLogin = require("./routers/login");
 let rutasRegister = require("./routers/register");
+let rutasProductos = require("./routers/productos");
 
 app.use(express.static(publicPath))
+
+// ejs uso 
+
+app.set("view engine", "ejs");
 
 // nuevo
 app.get("/", rutasMain)
 app.get("/login", rutasLogin)
 app.get("/register", rutasRegister)
-
+app.get("/productos", rutasProductos )
 app.listen(PORT, () =>{console.log("Corriendo servidor en el puerto" + " " + PORT + " " + "http://localhost:" + PORT) } )
 
 

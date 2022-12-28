@@ -1,0 +1,9 @@
+.impar{
+    border: 2px blue solid;
+    
+}
+
+.par{
+    border: 2px yellow solid;
+    padding: 2px;
+}
