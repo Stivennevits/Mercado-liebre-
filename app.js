@@ -9,6 +9,8 @@ let rutasMain = require("./routers/main");
 let rutasLogin = require("./routers/login");
 let rutasRegister = require("./routers/register");
 let rutasProductos = require("./routers/productos");
+let rutasListas = require("./routers/listas");
+let rutasSearch = require("./routers/search");
 
 app.use(express.static(publicPath))
 
@@ -21,6 +23,9 @@ app.get("/", rutasMain)
 app.get("/login", rutasLogin)
 app.get("/register", rutasRegister)
 app.get("/productos", rutasProductos )
+app.get("/list", rutasListas)
+app.get("/search", rutasSearch)
+
 app.listen(PORT, () =>{console.log("Corriendo servidor en el puerto" + " " + PORT + " " + "http://localhost:" + PORT) } )
 
 
