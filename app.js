@@ -4,15 +4,19 @@ const app = express()
 const publicPath = path.resolve(__dirname, "./public")
 const PORT = process.env.PORT || 4020
 
+// aplicar metodos put y delete
+const methodOverride = require("method-override")
+app.use(methodOverride("_method"));
+
 // nuevo
 let rutasMain = require("./routers/main");
-let rutasLogin = require("./routers/login");
-let rutasRegister = require("./routers/register");
-let rutasProductos = require("./routers/productos");
-let rutasListas = require("./routers/listas");
-let rutasSearch = require("./routers/search");
+let rutasUsers = require("./routers/users");
 
 app.use(express.static(publicPath))
+
+// captura de info en verbo post 
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json())
 
 // ejs uso 
 
@@ -20,11 +24,13 @@ app.set("view engine", "ejs");
 
 // nuevo
 app.get("/", rutasMain)
-app.get("/login", rutasLogin)
-app.get("/register", rutasRegister)
-app.get("/productos", rutasProductos )
-app.get("/list", rutasListas)
-app.get("/search", rutasSearch)
+app.get("/login", rutasUsers)
+app.get("/register", rutasUsers)
+app.post("/register", rutasUsers)
+app.get("/productos", rutasUsers )
+app.get("/list", rutasUsers)
+app.get("/search", rutasUsers)
+app.get("/usuarios", rutasUsers)
 
 app.listen(PORT, () =>{console.log("Corriendo servidor en el puerto" + " " + PORT + " " + "http://localhost:" + PORT) } )
 

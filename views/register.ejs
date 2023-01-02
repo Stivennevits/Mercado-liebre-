@@ -30,18 +30,18 @@
 
     </header>
 
-    <form action="/" method="GET" class="register-form">
+    <form action="/register" method="post" class="register-form">
         <div class="control-formulario">
             <label for="nombre">Nombres y Apellidos</label>
             <input type="text" name="nombre" id="nombre" minlength="5" placeholder="Nombres y Apellidos" class="control">   
           </div> 
         <div class="control-formulario">
             <label for="user-name">Nombre de Usuari@</label>
-            <input type="text" name="user-name" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
+            <input type="text" name="userName" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
           </div> 
           <div class="control-formulario">
             <label for="Correo">Correo Electrónico</label>
-            <input type="text" name="Correo" id="Correo" pattern=".+@globex\.com" minlength="8" placeholder="abcd@efg.com" class="control" required>
+            <input type="email" name="Correo" id="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="8" placeholder="abcd@efg.com" class="control" required>
           </div> 
         <div class="control-formulario">
             <label for="fecha">Fecha De Nacimiento</label> 
