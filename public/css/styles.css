@@ -24,6 +24,7 @@ header .encabezado {
   justify-content: space-around;
   position: fixed;
   z-index: 1;
+  
 }
 header .imagen-logo {
   width: 45%;
@@ -304,7 +305,7 @@ footer .copyrigth {
     justify-content: space-around;
     position: fixed;
     z-index: 1;
-    margin: -92px 0px;
+    
   }
   header .imagen-logo {
     width: 45%;
