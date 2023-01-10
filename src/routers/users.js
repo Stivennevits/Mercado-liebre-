@@ -14,6 +14,7 @@ router.put("/edit", function(req,res){
 router.get("/search", userController.search)
 router.get("/productos", userController.productos)
 router.get("/list", userController.list);
+router.get("/vender" , userController.vender)
 
 
 

@@ -2,6 +2,9 @@ const { writeFileSync } = require("fs")
 const path = require("path")
 const fs = require("fs");
 
+const productosFilePath = path.join(__dirname, "../data/productos.json")
+//  let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
+
 const userController = {
 
     login: function(req, res){
@@ -10,21 +13,13 @@ const userController = {
             },
 
     register: function(req, res){
-        //res.sendFile(path.join(__dirname,"../views/register.html"))
+        res.sendFile(path.join(__dirname,"../views/register.html"))
         res.render("register/register")
     },
 
     productos: function (req,res){
-        let artic = [
-            "moto",
-            "carro",
-            "avion",
-            "ps 5 ",
-            "portatil", 
-            "vapper"
-        ]
-
-        res.render("productos/productos", {"articulos": artic});
+        productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
+        res.render("productos/productos", {productos:productos});
     },
 
     edit: function(req,res){
@@ -123,6 +118,10 @@ const userController = {
         fs.writeFileSync("data/usuarios.json", usuariosJSON)
 
         res.redirect("/")
+    },
+    vender: function(req,res){
+        res.render("vender/formularioVender")
+
     }
 
 }

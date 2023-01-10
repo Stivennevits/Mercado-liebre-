@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home MercadoLiebre</title>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
@@ -19,41 +19,50 @@
 
 
 
+
 </head>
 
 <%- include("../partials/head/header.ejs") %>
 <body>
-    <h2> Productos perrraaaaaaaaaa </h2>
+    <h2> Productos </h2>
 
-    <p> Articulos </p><br>
+    <p> PRoductos </p><br><br><br><br><br><br><br><br><br><br>
 
-    <ul>
-    <% for (let i = 0; i < articulos.length; i++) {  %>
-        <li>
-            <%= articulos[i] %>
-            <br>
-        </li>
-        <br>
-        <% } %>
-    </ul>  
 
-    <br>
-    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <p> Productos </p>
-    <br>
+        <% productos.forEach(producto=> { %>
 
-    <% for (let i = 0; i <= 18; i ++) {  %>
-        <label for=""> Producto <%= i + 1 %> </label>
+            <section class="anuncios">
+                <h3 class="titulares">Nuestros Productos</h3>
+                <section class="section-article-basado">
+                    <article class="articulo">
+                                <img src="/img/<%= producto.img %> " class="img-producto" alt="<%= producto.nombre %>">
+                            <div class="detalle-producto">
 
-        <% if (i%2==0) {%>  
-        <input class="par" type="text" name="Productos[]">
+                                <div class="truck-icon"><i class="fa-sharp fa-solid fa-truck"></i></div>
 
-        <% } else { %>
-            <input class="impar" type="text" name="Productos[]">
-            <% } %>
-        <br>
-        <% } %>
+                                <div id="info">
+                                    <p class="precios"><%= producto.precio %></p>
+                                    <p class="descuentos"><%= producto.descuento %></p>
+                                </div>
+                                <p class="descripcion"><%= producto.nombre %></p>
+                                
+                                <a href="/heroes/detail/<%= producto.id %>" class="btn btn-outline-primary btn-block">Ver más...</a>
+
+                            </div>
+                    
+                    </article>
+                </section>
+            </section>
+           
+           
+
+            <% }); %>
+
+    </div>
+
+   
 
         <%- include("../partials/footer/footer.ejs") %>
 </body>

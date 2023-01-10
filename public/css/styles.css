@@ -473,6 +473,28 @@ footer .copyrigth {
     justify-content: space-around;
   }
 
+  /* formulario vender */
+  .control-formulario{
+    margin: 90px;
+    border-radius: 47px;
+    padding: 65px 50px 52px 32px;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gainsboro;
+  }
+  .text-center header{
+    display: flex;
+  }
+  .form-sell{
+    padding: auto;
+    width: 100vh;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 4px;
+  }
+
   /* formulario register*/
   .register-form {
     margin: 90px;

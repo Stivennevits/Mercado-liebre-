@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+
+</head>
+<body>
+    <%- include("../partials/head/header.ejs") %>
+
+    <div class="container main-container" style="margin-top: 100px;">
+
+        
+        <h1 class="animated fadeIn"><%= producto.nombre.toUpperCase() %>  <small>(<%= date %>)</small></h1>
+        <hr>
+
+        <div class="row animated fadeIn">
+            <div class="col-md-4">
+                <img src="/img/<%= producto.img %> " class="img-fluid" [alt]="producto.nombre" srcset="">
+                <br><br>
+                <a href="/producto" class="btn btn-outline-success btn-block">Regresar</a>
+                <a href="/productos/detail/edit/<%= heroe.id %>" class="btn btn-outline-primary btn-block">Editar</a>
+                <form action="/productos/detail/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
+                    <button type="submit" class="btn btn-outline-danger btn-block">Eliminar</button>
+                </form>
+                <!-- <a href="/heroes/detail/delete/<%= heroe.id %>" class="btn btn-outline-danger btn-block">Eliminar</a> -->
+            </div>
+            <div class="col-md-8">
+                <h3><%= producto.nombre %> </h3>
+                <hr>
+                <p>
+                   <%= producto.precio %> 
+                </p>
+                
+            </div>
+
+        </div>
+        <%- include("../partials/footer/footer.ejs") %>
+</body>
+</html>

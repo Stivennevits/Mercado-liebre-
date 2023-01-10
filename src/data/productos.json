@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nombre": "cafetera mulinex",
+        "precio" : 6.770,
+        "descuento" : "40% off",
+        "img": "img-cafetera-moulinex.jpg"
+    }
+]
