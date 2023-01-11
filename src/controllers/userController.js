@@ -33,12 +33,39 @@ const userController = {
         }
         productos.push(newProduct); // se agrega el nuevo objeto a la lista usuarios.json 
         fs.writeFileSync(productosFilePath, JSON.stringify(this.productos, null, " "))
-        res.redirect("/users/productos")
+        res.redirect("/users/")
     },
     detail: function(req,res){
         const id = req.params.id;
         const producto = productos.find(producto => producto.id == id);
         res.render("productos/producto", {producto})
+    },
+    editProduct: function(req,res){
+        const id = req.params.id;
+        const producto = productos.find(producto => producto.id == id);
+        res.render("vender/editarProducto", {producto})
+
+    },
+    update: function(req,res){
+        const id = req.params.id;
+        const productoToEdit = productos.find(producto => producto.id == id);
+
+        const editarProducto = {
+            id: id,
+            nombre : req.body.nombre,
+            precio : req.body.precio,
+            descuento: req.body.descuento,
+            img: req.file ? req.file.filename : productoToEdit.img
+        }
+
+        productos.forEach((producto, index) => {
+            if(producto.id  == id){
+                productos[index] = editarProducto
+            }
+        })
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null," "));
+            res.redirect("/users/")
+
     },
 
     edit: function(req,res){
@@ -141,6 +168,12 @@ const userController = {
     vender: function(req,res){
         res.render("vender/formularioVender")
 
+    },
+    destroy: function(req,res){
+        const id = req.params.id;
+        const productosFinal = productos.filter(producto => producto.id != id);
+        fs.writeFileSync(productosFilePath, JSON.stringify(productosFinal, null," "));
+        res.redirect("/")
     }
 
 }

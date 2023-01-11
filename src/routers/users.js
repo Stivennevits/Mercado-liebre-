@@ -18,7 +18,9 @@ router.get("/list", userController.list);
 router.get("/detail/vender" ,userController.vender)
 router.post("/detail", uploadFile.single("imgFile"), userController.store)
 router.get("/detail/:id", userController.detail)
-
+router.get("/detail/edit/:id", userController.editProduct)
+router.put("/detail/edit/:id", uploadFile.single("imgFile"), userController.update)
+router.delete("/detail/delete/:id", userController.destroy)
 
 
 module.exports = router;

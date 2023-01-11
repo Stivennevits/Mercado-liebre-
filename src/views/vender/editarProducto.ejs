@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita Tu Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+</head>
+
+<%- include("../partials/head/header.ejs") %>
+    <%- include("../partials/navbar/navbar.ejs") %>
+    <br><br><br><br><br><br><br><br>
+    <br>
+        <form class="control-formulario" method="post"  action="/users/detail/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
+
+            <fieldset>
+                <br><br>
+                <legend class="text-center header">Editar Producto <p ><%= producto.nombre %></p> </legend>
+                <br><br>
+
+                <div class="form-sell">
+                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                    <div>
+                        <input type="text" name="nombre" id="nombre" placeholder="<%= producto.nombre %>">
+                    </div>
+                </div>
+                <div class="form-sell">
+                    <div>
+                        <input type="text" name="precio" id="precio" placeholder="<%= producto.precio %>">
+                    </div>
+                </div>
+                <div class="form-sell">
+                    <div>
+                        <input type="text" name="descuento" id="descuento" placeholder="<%= producto.descuento %>">
+                    </div>
+                </div>
+                <div class="form-sell">
+                    <div>
+                        <input class="form-control" id="imgFile" name="imgFile" type="file" />
+                    </div>
+                </div>
+
+                <div class="botoncitos">
+                    <div class="botoncitos">
+                        <button type="submit" class="boton-formulario">Editar</button>
+                        
+                    </div>
+                </div>
+
+                
+            </fieldset>
+
+        </form>
+
+
+    <%- include("../partials/footer/footer.ejs") %>
+<body>
+    
+</body>
+</html>

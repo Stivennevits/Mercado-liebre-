@@ -26,5 +26,33 @@
   "precio": "$23.200",
   "descuento": "5% off",
   "img": "1673448897453_user.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Vaper",
+  "precio": "100.000",
+  "descuento": "25% OFF ",
+  "img": "1673464696617_user.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Shampoo Milagro Herbal Milagros Romero Jengibre.",
+  "precio": "35.900",
+  "descuento": "5% off",
+  "img": "1673465020268_user.jpg"
+ },
+ {
+  "id": "7",
+  "nombre": "",
+  "precio": "$1.350.000",
+  "descuento": "25% OFF ",
+  "img": "1673465387509_user.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Ron Caldas 15 Años 750 Ml",
+  "precio": "139.900",
+  "descuento": "5% off",
+  "img": "1673465593893_user.jpg"
  }
 ]
