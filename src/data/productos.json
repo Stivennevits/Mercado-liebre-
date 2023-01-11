@@ -1,9 +1,30 @@
 [
-    {
-        "id": 1,
-        "nombre": "cafetera mulinex",
-        "precio" : 6.770,
-        "descuento" : "40% off",
-        "img": "img-cafetera-moulinex.jpg"
-    }
+ {
+  "id": 1,
+  "nombre": "cafetera mulinex",
+  "precio": 6.77,
+  "descuento": "40% off",
+  "img": "img-cafetera-moulinex.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Samsung Galaxy S10",
+  "precio": "$70.500",
+  "descuento": "10% off",
+  "img": "1673448719408_user.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "MacBook Pro 2019",
+  "precio": "$230.000",
+  "descuento": "20% off",
+  "img": "1673448773037_user.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "SmartTv Samsung 43\"",
+  "precio": "$23.200",
+  "descuento": "5% off",
+  "img": "1673448897453_user.jpg"
+ }
 ]

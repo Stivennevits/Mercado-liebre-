@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
 
-    <link rel="stylesheet" href="/css/Productos.css">
-<link rel="stylesheet" href="/css/styles.css">
+    
+
 
 
 
@@ -28,42 +28,30 @@
 
     <p> PRoductos </p><br><br><br><br><br><br><br><br><br><br>
 
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-        <% productos.forEach(producto=> { %>
-
-            <section class="anuncios">
-                <h3 class="titulares">Nuestros Productos</h3>
+    <main >
+        <section class="anuncios">
+            <h3 class="titulares">Nuestros Productos</h3>
                 <section class="section-article-basado">
-                    <article class="articulo">
-                                <img src="/img/<%= producto.img %> " class="img-producto" alt="<%= producto.nombre %>">
-                            <div class="detalle-producto">
-
-                                <div class="truck-icon"><i class="fa-sharp fa-solid fa-truck"></i></div>
-
-                                <div id="info">
-                                    <p class="precios"><%= producto.precio %></p>
-                                    <p class="descuentos"><%= producto.descuento %></p>
-                                </div>
-                                <p class="descripcion"><%= producto.nombre %></p>
+                    <% productos.forEach(producto=> { %>
+                     <article class="articulo">
+                            <img src="/img/<%= producto.img %> " class="img-producto" alt="<%= producto.nombre %>">
+                                <div class="detalle-producto">
+                                    <div class="truck-icon"><i class="fa-sharp fa-solid fa-truck"></i></div>
+                                        <div id="info">
+                                            <p class="precios"><%= producto.precio %></p>
+                                            <p class="descuentos"><%= producto.descuento %></p>
+                                        </div>
+                                            <p class="descripcion"><%= producto.nombre %></p>
                                 
-                                <a href="/heroes/detail/<%= producto.id %>" class="btn btn-outline-primary btn-block">Ver más...</a>
+                                            <a href="detail/<%= producto.id %>" class="btn btn-outline-primary btn-block">Ver más...</a>
 
-                            </div>
-                    
-                    </article>
+                                </div>
+                            
+                     </article>
+                     <% }); %>
                 </section>
-            </section>
-           
-           
-
-            <% }); %>
-
-    </div>
-
-   
-
+        </section>
+    </main>
         <%- include("../partials/footer/footer.ejs") %>
 </body>
 </html>

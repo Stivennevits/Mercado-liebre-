@@ -19,7 +19,26 @@ const userController = {
 
     productos: function (req,res){
         productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
-        res.render("productos/productos", {productos:productos});
+        res.render("productos/productos", {productos});
+    },
+
+    store: function(req,res){
+        // guardar producto 
+        let newProduct = {
+            id: productos[productos.length - 1].id + 1,
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            descuento: req.body.descuento, 
+            img: req.file.filename // se usa filename, que viene del multer
+        }
+        productos.push(newProduct); // se agrega el nuevo objeto a la lista usuarios.json 
+        fs.writeFileSync(productosFilePath, JSON.stringify(this.productos, null, " "))
+        res.redirect("/users/productos")
+    },
+    detail: function(req,res){
+        const id = req.params.id;
+        const producto = productos.find(producto => producto.id == id);
+        res.render("productos/producto", {producto})
     },
 
     edit: function(req,res){
@@ -58,7 +77,7 @@ const userController = {
         res.render("listas/listas", {"users" : users})
     },
 
-    search: function(req,res){
+    searchUser: function(req,res){
 
         let busquedaUser = req.query.query;
         // leer el json con los datos
@@ -84,7 +103,7 @@ const userController = {
 
 
        // se hace controller para el post 
-    create: function(req,res){
+    createUser: function(req,res){
         let regUsuario = {
             nombre: req.body.nombre , 
             nombreUsuario: req.body.userName ,

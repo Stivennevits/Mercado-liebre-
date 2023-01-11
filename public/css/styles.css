@@ -130,7 +130,7 @@ h3.titulares {
 }
 
 article.articulo {
-  width: 90%;
+  width: auto;
   margin: 10px;
   position: block;
 }
@@ -165,6 +165,7 @@ main article div.truck-icon :hover {
 img.img-producto {
   width: 100%;
   align-items: center;
+  display: flex;
 }
 
 p.precios {
@@ -471,6 +472,15 @@ footer .copyrigth {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  /* boton en formulario producto */
+  .product-buttom{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center
   }
 
   /* formulario vender */

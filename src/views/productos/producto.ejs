@@ -5,38 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
 
 </head>
 <body>
     <%- include("../partials/head/header.ejs") %>
 
-    <div class="container main-container" style="margin-top: 100px;">
+    <br><br><br><br><br><br><br><br><br>
 
-        
-        <h1 class="animated fadeIn"><%= producto.nombre.toUpperCase() %>  <small>(<%= date %>)</small></h1>
-        <hr>
+    <hr>
+    <main>
+    <section class="anuncios">
+        <h3 class="titulares"><p ><%= producto.nombre %></p></h3>
+            <section class="section-article-basado">
+               
+                 <article class="articulo">
+                        <img src="/img/<%= producto.img %> " class="img-producto" alt="<%= producto.nombre %>">
+                            <div class="detalle-producto">
+                                <div class="truck-icon"><i class="fa-sharp fa-solid fa-truck"></i></div>
+                                    <div id="info">
+                                        <p class="precios"><%= producto.precio %></p>
+                                        <p class="descuentos"><%= producto.descuento %></p>
+                                    </div>
+                                        <p class="descripcion"><%= producto.nombre %></p>
+                            
+                                        
 
-        <div class="row animated fadeIn">
-            <div class="col-md-4">
-                <img src="/img/<%= producto.img %> " class="img-fluid" [alt]="producto.nombre" srcset="">
-                <br><br>
-                <a href="/producto" class="btn btn-outline-success btn-block">Regresar</a>
-                <a href="/productos/detail/edit/<%= heroe.id %>" class="btn btn-outline-primary btn-block">Editar</a>
-                <form action="/productos/detail/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
-                    <button type="submit" class="btn btn-outline-danger btn-block">Eliminar</button>
-                </form>
-                <!-- <a href="/heroes/detail/delete/<%= heroe.id %>" class="btn btn-outline-danger btn-block">Eliminar</a> -->
-            </div>
-            <div class="col-md-8">
-                <h3><%= producto.nombre %> </h3>
-                <hr>
-                <p>
-                   <%= producto.precio %> 
-                </p>
-                
-            </div>
+                            </div>
+                        
+                 </article>
+                 
+                      
+                    </div>
 
-        </div>
+                    <br><br>
+                    <section class="product-buttom"> 
+                        <a href="/heroes" class="btn btn-outline-success btn-block">Regresar</a>
+                        <a href="/heroes/detail/edit/<%= producto.id %>" class="btn btn-outline-primary btn-block">Editar</a>
+                        <form action="/heroes/detail/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
+							<button type="submit" class="boton-formulario">Eliminar</button>
+						</form>
+                    </section>
+                </main>
+
         <%- include("../partials/footer/footer.ejs") %>
 </body>
 </html>
