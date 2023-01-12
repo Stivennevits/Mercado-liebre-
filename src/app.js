@@ -2,6 +2,7 @@
 const express = require("express")
 const path = require("path")
 const methodOverride = require("method-override")
+var logMiddleWare = require("../src/middlewares/logMiddleWare")
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -11,6 +12,7 @@ const app = express();
 //app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 const publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath))
+app.use(logMiddleWare)
 // captura de info en verbo post 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

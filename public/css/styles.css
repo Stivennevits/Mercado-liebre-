@@ -240,7 +240,7 @@ footer .copyrigth {
 
 /* formulario register*/
 .register-form {
-  margin: 22px;
+  margin: 5%;
   border-radius: 47px;
   padding: 65px 50px 52px 32px;
   display: grid;
@@ -249,7 +249,7 @@ footer .copyrigth {
   background-color: gainsboro;
 }
 .control-formulario {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: black;
 }
 .control-formulario label {
@@ -506,11 +506,15 @@ footer .copyrigth {
   }
 
   /* formulario register*/
+  .register{
+    display: flex;
+  }
+
   .register-form {
     margin: 90px;
     border-radius: 47px;
     padding: 65px 50px 52px 32px;
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: gainsboro;
@@ -687,23 +691,36 @@ footer .copyrigth {
     padding-bottom: 10px;
     padding-left: 10px;
   }
+  /* formulario login  */
 
-  /* formulario register*/
-  .register-form {
-    margin: 90px;
+  .login-form {
+    margin-top: 26vh;
+    padding-top: initial;
     border-radius: 47px;
-    padding: 65px 50px 52px 32px;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: gainsboro;
   }
+  /* formulario register*/
+  .register-form {
+    margin-top: 26vh;
+    padding-top: initial;
+    border-radius: 47px;
+    display: block
+  
+  }
   .control-formulario {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    display: flex;
     color: black;
+    padding: 0px;
+  }
+  .listota{
+    justify-content: space-around;
   }
   .control-formulario label {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     display: block;
   }
 

@@ -7,10 +7,10 @@
   "img": "img-cafetera-moulinex.jpg"
  },
  {
-  "id": 2,
-  "nombre": "Samsung Galaxy S10",
-  "precio": "$70.500",
-  "descuento": "10% off",
+  "id": "2",
+  "nombre": "",
+  "precio": "",
+  "descuento": "",
   "img": "1673448719408_user.jpg"
  },
  {

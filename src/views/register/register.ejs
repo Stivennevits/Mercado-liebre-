@@ -17,13 +17,13 @@
 <body>
   <%- include("../partials/head/header.ejs") %>
 
-    </header>
 
+  <main class="register"> 
     <form action="/register" method="post" class="register-form">
         <div class="control-formulario">
             <label for="nombre">Nombres y Apellidos</label>
             <input type="text" name="nombre" id="nombre" minlength="5" placeholder="Nombres y Apellidos" class="control">   
-          </div> 
+        </div> 
         <div class="control-formulario">
             <label for="user-name">Nombre de Usuari@</label>
             <input type="text" name="userName" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
@@ -71,7 +71,9 @@
             </div>
          
 
-    </form>
+      </form>
+  </main>
+
     <%- include("../partials/footer/footer.ejs") %>
 </body>
 
