@@ -21,30 +21,47 @@
 <%- include("../partials/head/header.ejs") %>
 <body>
     <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <br>
-    <br>
-        
-
-    <h1>UserList</h1>
-
-    <ul>
-        <% for (let i = 0; i < users.length; i++) {  %>
-            <li>
-              <a href="/lista/detail?listaid=<%= users[i].id %>"><%= users[i].nombre %>  </a>
-            </li>
-            <% } %>
-    </ul>
-
+    <br><br><br><br><br><br><br>
+  
+    <main>
     <h2> Search</h2>
-    <form action="/search" method="GET">
+    <form action="/users/search" method="GET">
         <input type="text" name="query">
         <input type="submit" value="Search">
     </form>
 
-    <br><br><br><br><br><br><br>
-    
-   
+    <br><br><br>
+    <h1>Usuarios</h1>
+    <ul class="lista-users">
+        <% for (let i = 0; i < users.length; i++) {  %>
+            <li>
+                <div class="listas">
+                        <img class="imagen-user" src="/img/<%= users[i].picture %> " alt="<%= users.nombre %>">  
+                        
+                    <div class="info-usuarios" >
+                        
+                        <p> Id : <%= users[i].id %></p>
+                        
+                        <p>Nombre:   <%= users[i].nombre %> </p>
+                        <p>Username:  <%= users[i].nombreUsuario  %> </p>
+                        <p>Correo:  <%= users[i].correo %>  </p>
+                        <p>Fecha de Nacimiento  <%= users[i].fecha  %> </p>
+                        <p>Dirección: <%= users[i].Domicilio %> </p>
+                        <p>Perfil de usuario:  <%= users[i].preferencia %> </p>
+                        <p>Intereses:  <%= users[i].Intereses %> </p>
+                        <a href="Usuarios/detail/<%= users[i].id %>" > Ver más ...</a>
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+            </li>
+            <% } %>
+    </ul>
+</main>
     <footer>
         <%- include("../partials/footer/footer.ejs") %>
     </footer>

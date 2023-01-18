@@ -1,1 +1,58 @@
-[{"nombre":"edinson stiben","nombreUsuario":"assaasasasasa","correo":"abcd@efg.com","fecha":"1999-01-01","Domicilio":"av siempre viva","preferencia":"Comprador","Intereses":["Electro","Moda","Hogar","Jugueteria","Vida Sana"],"picture":"comprobanteguia.png","contraseña":["asdfghjkl123","let usuarioskl123"],"Confircontraseña":["asdfghjkl123","let usuarioskl123"]},{"nombre":"pepito","nombreUsuario":"pepi1234","correo":"negro@blanco.com","fecha":"2005-02-18","Domicilio":"cl 21 cvvvvvvvvvvvvv","preferencia":"Vendedor","Intereses":["Electro","Vida Sana"],"picture":"MicrosoftTeams-image.png","contraseña":["1111111111111111111111111111111","let usuarios"],"Confircontraseña":["1111111111111111111111111111111","let usuarios"]},{"nombre":"lola carola","nombreUsuario":"","correo":"pppppppppp@p.com","fecha":"","Domicilio":"","picture":"","contraseña":["",""],"Confircontraseña":["",""]},{"nombre":"edinson stiben","nombreUsuario":"assaasasasasa","correo":"negro@blanco.com","fecha":"1999-01-01","Domicilio":"av siempre vivaaaaaaaaaaaaaaa","preferencia":"Vendedor","Intereses":"Electro","picture":"error-404-foxplay.png","contraseña":["aaaaaaaaaa","aaaaaaaaaaa"],"Confircontraseña":["aaaaaaaaaa","aaaaaaaaaaa"]},{"nombre":"annie","nombreUsuario":"annie123","correo":"annie963@gmail.com","fecha":"2018-12-15","Domicilio":"kr 98 bbbbbbbbbbbbbb","preferencia":"Comprador","Intereses":["Moda","Hogar"],"picture":"WhatsApp Image 2023-01-02 at 23.44.09-removebg-preview.jpg","contraseña":["asdfghjkjaaa","asdfghjjkaaaa"],"Confircontraseña":["asdfghjkjaaa","asdfghjjkaaaa"]}]
+[
+ {
+  "id": "2",
+  "nombre": "chapulin colorado",
+  "nombreUsuario": "nocontabanconmiastucia",
+  "correo": "abcd@efg.com",
+  "fecha": "2002-02-02",
+  "Domicilio": "cl 21 cvvvvvvvvvvvvv",
+  "preferencia": "Vendedor",
+  "Intereses": "Moda",
+  "picture": "1674040362529_user.png",
+  "contraseña": "",
+  "Confircontraseña": ""
+ },
+ {
+  "id": 3,
+  "nombre": "nicole carrillo",
+  "nombreUsuario": "mcarrilo",
+  "correo": "nicolecarrillo@gmail.com",
+  "fecha": "1992-03-03",
+  "Domicilio": "el poblado",
+  "preferencia": "Vendedor",
+  "Intereses": [
+   "Electro",
+   "Moda",
+   "Hogar",
+   "Jugueteria",
+   "Vida Sana"
+  ],
+  "picture": "1673993096562_user.png"
+ },
+ {
+  "id": 4,
+  "nombre": "annie",
+  "nombreUsuario": "annie123",
+  "correo": "negro@blanco.com",
+  "fecha": "",
+  "Domicilio": "cl 21 cvvvvvvvvvvvvv",
+  "preferencia": "Comprador",
+  "Intereses": "Hogar",
+  "picture": "1673993310086_user.png",
+  "contraseña": "100000000000000000000",
+  "Confircontraseña": "100000000000000000000"
+ },
+ {
+  "id": 5,
+  "nombre": "Gomita",
+  "nombreUsuario": "gomigomi",
+  "correo": "gomita@gmail.com",
+  "fecha": "2018-12-15",
+  "Domicilio": "av siempre vivaaaaaaaaaaaaaaa",
+  "preferencia": "Comprador",
+  "Intereses": "Electro",
+  "picture": "1673994788086_user.png",
+  "contraseña": "aaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaa"
+ }
+]

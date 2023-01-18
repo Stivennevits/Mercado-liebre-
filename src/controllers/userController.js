@@ -1,9 +1,11 @@
 const { writeFileSync } = require("fs")
 const path = require("path")
 const fs = require("fs");
+const { check, validationResult, body } = require("express-validator")
 
 const productosFilePath = path.join(__dirname, "../data/productos.json")
 //  let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
+const usersFilePath = path.join(__dirname, "../data/usuarios.json")
 
 const userController = {
 
@@ -13,7 +15,7 @@ const userController = {
             },
 
     register: function(req, res){
-        res.sendFile(path.join(__dirname,"../views/register.html"))
+        //res.sendFile(path.join(__dirname,"../views/register.html"))
         res.render("register/register")
     },
 
@@ -40,12 +42,7 @@ const userController = {
         const producto = productos.find(producto => producto.id == id);
         res.render("productos/producto", {producto})
     },
-    editProduct: function(req,res){
-        const id = req.params.id;
-        const producto = productos.find(producto => producto.id == id);
-        res.render("vender/editarProducto", {producto})
-
-    },
+    
     update: function(req,res){
         const id = req.params.id;
         const productoToEdit = productos.find(producto => producto.id == id);
@@ -69,53 +66,24 @@ const userController = {
     },
 
     edit: function(req,res){
-        let idUser = req.params.idUser
-
-        let lista = [
-            {   
-                id: 1,
-                nombre: 'Motorola Moto E6 Plus',
-                precio: 14999
-            },
-            {   
-                id: 2,
-                nombre: 'Motorola Moto G7',
-                precio: 19999
-            },
-            {   
-                id: 3,
-                nombre: 'Alcatel 5033A',
-                precio: 6999
-            },
-            {   
-                id: 4,
-                nombre: 'Samsung Galaxy A50',
-                precio: 33499
-            }
-        ]   
-
-        let listaToEdit = lista[idUser]
-        res.render("edit/edit", {listaToEdit: listaToEdit})
+        const id = req.params.id
+        const user = users.find(user => user.id == id);
+        res.render("edit/edit", {user})
     },
 
     list: function(req,res){
-        let archivoJSON = fs.readFileSync("usuarios.json", {encoding: "utf-8"})
-        let users = JSON.parse(archivoJSON);
-        res.render("listas/listas", {"users" : users})
+        archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
+        users = JSON.parse(archivoJSON);
+        res.render("listas/listas", {users})
     },
 
     searchUser: function(req,res){
 
         let busquedaUser = req.query.query;
         // leer el json con los datos
-        let archivoJSON = fs.readFileSync("usuarios.json", {encoding: "utf-8"})
-
-        /* asi estaba anteriormente 
-        let lista = [ {nombre: 'Motorola Moto E6 Plus', precio: 14999 }, {nombre: 'Motorola Moto G7',  precio: 19999 }, { nombre: 'Alcatel 5033A',precio: 6999}, { nombre: 'Samsung Galaxy A50', precio: 33499  }  ] */
-        
+        archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
+        users = JSON.parse(archivoJSON);
         // nuevo listado
-        let users = JSON.parse(archivoJSON);
-
             let resultado=[]
 
             for(let i = 0; i < users.length; i++ ){
@@ -127,11 +95,14 @@ const userController = {
         res.render("listas/listasResults", {resultado: resultado})
 
     },
-
-
        // se hace controller para el post 
     createUser: function(req,res){
+        // guardar usuario
+        archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
+        users = JSON.parse(archivoJSON);
         let regUsuario = {
+
+            id: users[users.length - 1].id +1,
             nombre: req.body.nombre , 
             nombreUsuario: req.body.userName ,
             correo: req.body.Correo , 
@@ -139,31 +110,68 @@ const userController = {
             Domicilio: req.body.Domicilio , 
             preferencia: req.body.preferencia , 
             Intereses: req.body.Intereses , 
-            picture: req.body.picture , 
-            contraseña: req.body.contraseña , 
-            Confircontraseña: req.body.contraseña 
+            picture: req.file.filename, 
+            contraseña: req.body.contra , 
+            Confircontraseña: req.body.Ccontra 
 
         }
 
         // guardar datos
         // primero leer que datos existen 
-        let archivoUsuario = fs.readFileSync("data/usuarios.json",{encoding: "utf-8"});
+        /*
+        let archivoUsuario = fs.readFileSync(usersFilePath,{encoding: "utf-8"});
         let usuarios
         if (archivoUsuario == ""){
             usuarios = []
         } else {
             usuarios = JSON.parse(archivoUsuario)
         }
-
-        // se actualiza info 
-        usuarios.push(regUsuario)
+        */
+        // se actualiza info    
+        users.push(regUsuario)
 
         // se convierte a json 
-        usuariosJSON = JSON.stringify(usuarios)
+        //usuariosJSON = JSON.stringify(usuarios)
 
-        fs.writeFileSync("data/usuarios.json", usuariosJSON)
+        fs.writeFileSync(usersFilePath, JSON.stringify(this.users, null, " "))
+        res.redirect("/users/Usuarios")
+    },
+    detalleUser: function(req,res){
+        const id = req.params.id;
+        const user = users.find(user => user.id == id);
+        res.render("listas/usuario", {user})
+    },
+    editProduct: function(req,res){
+        const id = req.params.id;
+        const producto = productos.find(producto => producto.id == id);
+        res.render("vender/editarProducto", {producto})
 
-        res.redirect("/")
+    },
+    updateUser: function(req,res){
+        const id = req.params.id;
+        const userToEdit = users.find(user => user.id == id);
+
+        const editarUser = {
+            id: id,
+            nombre: req.body.nombre , 
+            nombreUsuario: req.body.userName ,
+            correo: req.body.Correo , 
+            fecha: req.body.fecha , 
+            Domicilio: req.body.Domicilio , 
+            preferencia: req.body.preferencia , 
+            Intereses: req.body.Intereses , 
+            picture: req.file ? req.file.filename : userToEdit.picture, 
+            contraseña: req.body.contra , 
+            Confircontraseña: req.body.Ccontra 
+
+        }
+        users.forEach((user,index) => {
+            if(user.id == id){
+                users[index] = editarUser
+            }
+        })
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+        res.redirect("/users/usuarios/")
     },
     vender: function(req,res){
         res.render("vender/formularioVender")
@@ -174,6 +182,12 @@ const userController = {
         const productosFinal = productos.filter(producto => producto.id != id);
         fs.writeFileSync(productosFilePath, JSON.stringify(productosFinal, null," "));
         res.redirect("/")
+    },
+    destroyUser: function(req,res){
+        const id = req.params.id;
+        const usersFinal = users.filter(user => user.id != id);
+        fs.writeFileSync(usersFilePath, JSON.stringify(usersFinal, null," "));
+        res.redirect("/users/usuarios/")
     }
 
 }

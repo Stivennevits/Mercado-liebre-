@@ -197,6 +197,11 @@ p.descripcion :hover {
   margin: 0px;
 }
 
+main.main-login{
+  background  : linear-gradient(white, grey  );
+  margin: 3em ;
+}
+
 /*FOOTER*/
 
 footer {
@@ -237,6 +242,41 @@ footer .copyrigth {
   padding-bottom: 10px;
   padding-left: 10px;
 }
+/* pagina usuarios */
+.lista-users{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+
+}
+.listas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid;
+  border-radius: 15px;
+  padding-top: 15px;
+  margin-top: 19px;
+ 
+  
+}
+.imagen-user{
+  width: calc( (100% / 3) - 10px );
+  align-items: flex-start;
+  padding: 18px;
+}
+.info-usuarios{
+  margin: 70px;
+  width: calc( (100% / 3) - 10px );
+}
+
 
 /* formulario register*/
 .register-form {
@@ -294,6 +334,10 @@ footer .copyrigth {
 
 @media screen and (min-width: 481px) {
   /*tablet */
+
+  .main-login{
+  background-color: linear-gradient(yellow, blue  );
+}
   header {
     width: 100vw;
     background-color: #eac926;
@@ -543,14 +587,18 @@ footer .copyrigth {
     font-size: 15px;
     color: #ebebeb;
     padding: 5px 10px;
+    cursor: pointer;
+    transition: 1s;
   }
   .boton-formulario:hover{
     background-color: #0022AA;
+    transform: scale(1.2) rotate(365deg);
   }
 }
 
 @media screen and (min-width: 769px) {
   /* desktop */
+  
   header {
     width: 100vw;
     background-color: #eac926;

@@ -19,7 +19,7 @@
 
 
   <main class="register"> 
-    <form action="/register" method="post" class="register-form">
+    <form action="/users/detail" method="post" class="register-form" enctype="multipart/form-data">
         <div class="control-formulario">
             <label for="nombre">Nombres y Apellidos</label>
             <input type="text" name="nombre" id="nombre" minlength="5" placeholder="Nombres y Apellidos" class="control">   
@@ -55,15 +55,15 @@
           </div> 
         <div class="control-formulario">
             <label for="picture">Foto de Perfil</label> 
-            <input type="file" name="picture" accept=".jpg, .png">
+            <input type="file" name="picture" id="picture" accept=".jpg, .png">
           </div> 
         <div class="control-formulario">
             <label for="contraseña">contraseña</label> 
-            <input type="password" name="contraseña" minlength="10" placeholder="Elige tu Contraseña" class="control">
+            <input type="password" name="contra" id="contra" minlength="10" placeholder="Elige tu Contraseña" class="control">
           </div> 
         <div class="control-formulario">
-            <label for="contraseña">Confirmar contraseña</label> 
-            <input type="password" name="contraseña" minlength="10" placeholder="Confirma tu Contraseña" class="control">
+            <label for="Ccontraseña">Confirmar contraseña</label> 
+            <input type="password" name="Ccontra" id="Ccontra" minlength="10" placeholder="Confirma tu Contraseña" class="control">
           </div> 
             <div class="botoncitos">
             <button type="submit" class="boton-formulario">Enviar</button >

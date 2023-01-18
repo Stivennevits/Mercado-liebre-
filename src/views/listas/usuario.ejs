@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>         
+        <%= user.nombre %> 
+        </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="stylesheet" href="/css/Productos.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<%- include("../partials/head/header.ejs") %>
+<body>
+    <br><br><br><br><br><br><br><br><br><br>
+
+
+    <main>
+        <div class="listas">
+            <img class="imagen-user" src="/img/<%= user.picture %> " alt="<%= users.nombre %>">  
+            
+        <div class="info-usuarios" >
+            
+            <p> Id : <%= user.id %></p>
+            
+            <p>Nombre:   <%= user.nombre %> </p>
+            <p>Username:  <%= user.nombreUsuario  %> </p>
+            <p>Correo:  <%= user.correo %>  </p>
+            <p>Fecha de Nacimiento  <%= user.fecha  %> </p>
+            <p>Dirección: <%= user.Domicilio %> </p>
+            <p>Perfil de usuario:  <%= user.preferencia %> </p>
+            <p>Intereses:  <%= user.Intereses %> </p>
+           
+            
+            
+        </div>
+
+        <section class="product-buttom"> 
+            <a href="/users/Usuarios" class="btn btn-outline-success btn-block">Regresar</a>
+            <a href="/users/Usuarios/detail/edit/<%= user.id %>" class="btn btn-outline-primary btn-block">Editar</a>
+            <form action="/users/Usuarios/detail/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
+                <button type="submit" class="boton-formulario">Eliminar</button>
+            </form>
+        </section>
+        
+    </div>
+    
+    </main>
+    
+
+
+
+    <footer>
+        <%- include("../partials/footer/footer.ejs") %>
+    </footer>
+</body>
+</html>

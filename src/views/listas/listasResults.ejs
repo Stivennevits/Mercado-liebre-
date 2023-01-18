@@ -25,31 +25,40 @@
     <br>
     <br>
         
-
-    <h1>UserList</h1>
+    <main>
+    <h1>Usuarios que coinciden con tu busqueda</h1>
 
     <ul>
         <% for (let i = 0; i < resultado.length; i++) {  %>
             <li>
-              <a href="/lista/detail/<%=resultado[i].nombre %>">  <%= resultado[i].nombre %>  </a>
+                <div class="listas">
+                        <img class="imagen-user" src="/img/<%= users[i].picture %> " alt="<%= users.nombre %>">  
+                        
+                    <div class="info-usuarios" >
+                        
+                        <p> Id : <%= users[i].id %></p>
+                        
+                        <p>Nombre:   <%= users[i].nombre %> </p>
+                        <p>Username:  <%= users[i].nombreUsuario  %> </p>
+                        <p>Correo:  <%= users[i].correo %>  </p>
+                        <p>Fecha de Nacimiento  <%= users[i].fecha  %> </p>
+                        <p>Dirección: <%= users[i].Domicilio %> </p>
+                        <p>Perfil de usuario:  <%= users[i].preferencia %> </p>
+                        <p>Intereses:  <%= users[i].Intereses %> </p>
+                        <a href="detail/<%= users.id %>" class="btn btn-outline-primary btn-block"> Ver más ...</a>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
             </li>
             <% } %>
     </ul>
-
-    <h2> Search by name</h2>
-    <form action="/search" method="GET">
-        <input type="text" name="query">
-        <input type="submit" value="Search">
-    </form>
-
-    <br><br><br><br>
-
-    <h2> Search by price</h2>
-    <form action="/search" method="GET">
-        <input type="number" name="price">
-        <input type="submit" value="Search">
-    </form>
-    <br><br><br><br>
+    <br>
+    <br>
+</main>
    
     <footer>
         <%- include("../partials/footer/footer.ejs") %>  
