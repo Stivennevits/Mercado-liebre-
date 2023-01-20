@@ -1,7 +1,7 @@
+const { validationResult } = require("express-validator")
 const { writeFileSync } = require("fs")
 const path = require("path")
 const fs = require("fs");
-const { check, validationResult, body } = require("express-validator")
 
 const productosFilePath = path.join(__dirname, "../data/productos.json")
 //  let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
@@ -25,7 +25,29 @@ const userController = {
     },
 
     store: function(req,res){
-        // guardar producto 
+        
+        let errors  = validationResult(req);
+        
+        if(errors.errors.length > 0){
+            res.render("vender/formularioVender", {errors: errors.mapped(), old: req.body})
+        }else{
+            productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
+            let newProduct = {
+                id: productos[productos.length - 1].id + 1,
+                nombre: req.body.nombre,
+                precio: req.body.precio,
+                descuento: req.body.descuento, 
+                img: req.file.filename // se usa filename, que viene del multer
+            }
+            productos.push(newProduct); // se agrega el nuevo objeto a la lista usuarios.json 
+            fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
+            res.redirect("/users/") 
+        }
+        
+        /*
+        if (errors.isEmpty()){
+             // guardar producto 
+        
         let newProduct = {
             id: productos[productos.length - 1].id + 1,
             nombre: req.body.nombre,
@@ -35,7 +57,11 @@ const userController = {
         }
         productos.push(newProduct); // se agrega el nuevo objeto a la lista usuarios.json 
         fs.writeFileSync(productosFilePath, JSON.stringify(this.productos, null, " "))
-        res.redirect("/users/")
+        res.redirect("/users/") 
+        }else{
+            res.render("vender/formularioVender", {errors: errors.array(), old: req.body})
+        }*/
+       
     },
     detail: function(req,res){
         const id = req.params.id;
@@ -97,7 +123,13 @@ const userController = {
     },
        // se hace controller para el post 
     createUser: function(req,res){
-        // guardar usuario
+
+        let errors = validationResult(req);
+
+        if(errors.errors.length > 0){
+            return res.render("register/register", {errors: errors.mapped(), old: req.body})
+        }else{
+            // guardar usuario
         archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
         users = JSON.parse(archivoJSON);
         let regUsuario = {
@@ -115,26 +147,38 @@ const userController = {
             Confircontraseña: req.body.Ccontra 
 
         }
-
-        // guardar datos
-        // primero leer que datos existen 
-        /*
-        let archivoUsuario = fs.readFileSync(usersFilePath,{encoding: "utf-8"});
-        let usuarios
-        if (archivoUsuario == ""){
-            usuarios = []
-        } else {
-            usuarios = JSON.parse(archivoUsuario)
-        }
-        */
-        // se actualiza info    
         users.push(regUsuario)
-
-        // se convierte a json 
-        //usuariosJSON = JSON.stringify(usuarios)
-
         fs.writeFileSync(usersFilePath, JSON.stringify(this.users, null, " "))
         res.redirect("/users/Usuarios")
+        }
+        
+        /*
+        if (errors.isEmpty()){
+            // guardar usuario
+        archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
+        users = JSON.parse(archivoJSON);
+        let regUsuario = {
+
+            id: users[users.length - 1].id +1,
+            nombre: req.body.nombre , 
+            nombreUsuario: req.body.userName ,
+            correo: req.body.Correo , 
+            fecha: req.body.fecha , 
+            Domicilio: req.body.Domicilio , 
+            preferencia: req.body.preferencia , 
+            Intereses: req.body.Intereses , 
+            picture: req.file.filename, 
+            contraseña: req.body.contra , 
+            Confircontraseña: req.body.Ccontra 
+
+        }
+        users.push(regUsuario)
+        fs.writeFileSync(usersFilePath, JSON.stringify(this.users, null, " "))
+        res.redirect("/users/Usuarios")
+        }else{
+            res.render("register/register", {errors: errors.array(), old: req.body})
+        }*/
+        
     },
     detalleUser: function(req,res){
         const id = req.params.id;
@@ -174,6 +218,7 @@ const userController = {
         res.redirect("/users/usuarios/")
     },
     vender: function(req,res){
+        
         res.render("vender/formularioVender")
 
     },

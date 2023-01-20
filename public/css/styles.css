@@ -289,11 +289,18 @@ footer .copyrigth {
   background-color: gainsboro;
 }
 .control-formulario {
-  margin-bottom: 5px;
-  color: black;
+  margin-bottom: 0px;
+    display: flex;
+    color: black;
+    padding: 0px 0px 0px 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .control-formulario label {
-  margin-bottom: 15px;
+  margin-bottom: 1px;
   display: block;
 }
 
@@ -517,6 +524,7 @@ footer .copyrigth {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
   /* boton en formulario producto */
   .product-buttom{
     display: flex;
@@ -555,7 +563,7 @@ footer .copyrigth {
   }
 
   .register-form {
-    margin: 90px;
+    margin: 24px;
     border-radius: 47px;
     padding: 65px 50px 52px 32px;
     display: flex;
@@ -568,7 +576,7 @@ footer .copyrigth {
     color: black;
   }
   .control-formulario label {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     display: block;
   }
 
@@ -752,12 +760,30 @@ footer .copyrigth {
   }
   /* formulario register*/
   .register-form {
-    margin-top: 26vh;
+    margin-top: 0vh;
     padding-top: initial;
     border-radius: 47px;
     display: block
   
   }
+  .error-form{
+    color: red;
+  }
+  .is-invalid{
+    border-color: red;
+
+  }
+ 
+  .control-formulario{
+    margin: 28px;
+    border-radius: 47px;
+    padding: 65px 50px 52px 32px;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gainsboro;
+  }
+
   .control-formulario {
     margin-bottom: 5px;
     display: flex;

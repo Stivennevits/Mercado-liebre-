@@ -54,5 +54,18 @@
   "picture": "1673994788086_user.png",
   "contraseña": "aaaaaaaaaaaaaa",
   "Confircontraseña": "aaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 6,
+  "nombre": "MacBook Pro 2019",
+  "nombreUsuario": "nocontabanconmiastucia",
+  "correo": "abcd@efg.com",
+  "fecha": "1996-01-01",
+  "Domicilio": "av siempre viva255",
+  "preferencia": "Comprador",
+  "Intereses": "Moda",
+  "picture": "1674051510698_user.jpg",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaaaaaa"
  }
 ]

@@ -54,5 +54,47 @@
   "precio": "139.900",
   "descuento": "5% off",
   "img": "1673465593893_user.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "iPhone 14 128gb",
+  "precio": "4.440.000",
+  "descuento": "6% off",
+  "img": "1674045894304_user.jpg"
+ },
+ {
+  "id": 10,
+  "nombre": "celular",
+  "precio": " 890.000",
+  "descuento": "5% OFF",
+  "img": "1674078576962_user.jpg"
+ },
+ {
+  "id": 11,
+  "nombre": "  mack",
+  "precio": "$1.350.000",
+  "descuento": "",
+  "img": "1674084475441_user.jpg"
+ },
+ {
+  "id": 12,
+  "nombre": "  mack",
+  "precio": " 4.400.000",
+  "descuento": "5% off",
+  "img": "1674085594949_user.jpg"
+ },
+ {
+  "id": 13,
+  "nombre": " mackcas",
+  "precio": "  4.400.000s",
+  "descuento": "20% off",
+  "img": "1674085619318_user.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "  ",
+  "precio": "  ",
+  "descuento": "",
+  "img": "1674158919600_user.png"
  }
 ]
