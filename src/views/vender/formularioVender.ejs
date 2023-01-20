@@ -34,7 +34,8 @@
                 
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" 
                         class=" <%= locals.errors && errors.nombre ? 'is-invalid ' : null %>"
-                        value=" <%= locals.old ? old.nombre : null %>" >
+                        value="<%= locals.old ? old.nombre : null %>"
+                         >
                         <% if(locals.errors && errors.nombre) {  %>
                         
                             <div class="error-form"> <%= errors.nombre.msg %>  </div>
@@ -47,7 +48,9 @@
                     
                         <input  
                         type="text" name="precio" id="precio" placeholder="precio" 
-                        class=" <%= locals.errors && errors.precio ? 'is-invalid' : null %>" >
+                        class=" <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                        value="<%= locals.old ? old.precio : null %>"
+                         >
                         <% if(locals.errors && errors.precio) {  %>
                         
                             <div class="error-form"> <%= errors.precio.msg %>  </div>

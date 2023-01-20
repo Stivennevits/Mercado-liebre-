@@ -13,6 +13,7 @@ const userController = {
         //res.sendFile(path.join(__dirname,"../views/login.html"))
             res.render("login/login")
             },
+    processLogin:function(req,res){},        
 
     register: function(req, res){
         //res.sendFile(path.join(__dirname,"../views/register.html"))
