@@ -1,0 +1,103 @@
+[
+ {
+  "id": 2,
+  "nombre": "chapulin colorado",
+  "nombreUsuario": "nocontabanconmiastucia",
+  "correo": "abcd@efg.com",
+  "fecha": "2002-02-02",
+  "Domicilio": "cl 21 cvvvvvvvvvvvvv",
+  "preferencia": "Vendedor",
+  "Intereses": "Moda",
+  "picture": "1674040362529_user.png",
+  "contraseña": "",
+  "Confircontraseña": ""
+ },
+ {
+  "id": 3,
+  "nombre": "nicole carrillo",
+  "nombreUsuario": "mcarrilo",
+  "correo": "nicolecarrillo@gmail.com",
+  "fecha": "1992-03-03",
+  "Domicilio": "el poblado",
+  "preferencia": "Vendedor",
+  "Intereses": [
+   "Electro",
+   "Moda",
+   "Hogar",
+   "Jugueteria",
+   "Vida Sana"
+  ],
+  "picture": "1673993096562_user.png"
+ },
+ {
+  "id": 4,
+  "nombre": "annie",
+  "nombreUsuario": "annie123",
+  "correo": "negro@blanco.com",
+  "fecha": "",
+  "Domicilio": "cl 21 cvvvvvvvvvvvvv",
+  "preferencia": "Comprador",
+  "Intereses": "Hogar",
+  "picture": "1673993310086_user.png",
+  "contraseña": "100000000000000000000",
+  "Confircontraseña": "100000000000000000000"
+ },
+ {
+  "id": 5,
+  "nombre": "Gomita",
+  "nombreUsuario": "gomigomi",
+  "correo": "gomita@gmail.com",
+  "fecha": "2018-12-15",
+  "Domicilio": "av siempre vivaaaaaaaaaaaaaaa",
+  "preferencia": "Comprador",
+  "Intereses": "Electro",
+  "picture": "1673994788086_user.png",
+  "contraseña": "aaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 6,
+  "nombre": "MacBook Pro 2019",
+  "nombreUsuario": "nocontabanconmiastucia",
+  "correo": "abcd@efg.com",
+  "fecha": "1996-01-01",
+  "Domicilio": "av siempre viva255",
+  "preferencia": "Comprador",
+  "Intereses": "Moda",
+  "picture": "1674051510698_user.jpg",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 7,
+  "nombre": "  abcd edfg",
+  "nombreUsuario": "123pormi",
+  "correo": "123pormi@hotmail.com",
+  "fecha": "2006-06-06",
+  "Domicilio": "  inferno 123",
+  "preferencia": "Comprador",
+  "Intereses": [
+   "Electro",
+   "Moda",
+   "Hogar",
+   "Jugueteria",
+   "Vida Sana"
+  ],
+  "picture": "1674234024942_user.png",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 8,
+  "nombre": "rrrrrrrrrrr",
+  "nombreUsuario": "gomigomi",
+  "correo": "rrgomita@gmail.com",
+  "fecha": "2018-12-15",
+  "Domicilio": "av siempre vivaaaaaaaaaaaaaaa",
+  "preferencia": "Comprador",
+  "Intereses": "Electro",
+  "picture": "1673994788086_user.png",
+  "contraseña": "rrrrrrrrrrrrrr",
+  "Confircontraseña": "rrrrrrrrrrrrr"
+ }
+]

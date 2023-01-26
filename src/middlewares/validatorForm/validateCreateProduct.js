@@ -2,7 +2,7 @@
 const path = require('path');
 const { body } = require("express-validator")
 
-const validateCreateProduct =   [
+module.exports =   [
     body("nombre").notEmpty().withMessage("Debes nombrar el producto") ,
     body("precio").notEmpty().withMessage("Debes asignarle un precio"),
     body("imgFile").custom((value, {req}) => {
@@ -24,5 +24,3 @@ const validateCreateProduct =   [
 ]
 
 
-
-module.exports = validateCreateProduct;

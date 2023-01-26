@@ -33,7 +33,7 @@
                     <div>
                 
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" 
-                        class=" <%= locals.errors && errors.nombre ? 'is-invalid ' : null %>"
+                        class=" <%= locals.errors && errors.nombre ? 'is-invalid control' : "control" %>"
                         value="<%= locals.old ? old.nombre : null %>"
                          >
                         <% if(locals.errors && errors.nombre) {  %>
@@ -48,7 +48,7 @@
                     
                         <input  
                         type="text" name="precio" id="precio" placeholder="precio" 
-                        class=" <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                        class=" <%= locals.errors && errors.precio ? 'is-invalid control' : "control" %>"
                         value="<%= locals.old ? old.precio : null %>"
                          >
                         <% if(locals.errors && errors.precio) {  %>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-sell">
                     <div>
-                        <input type="text" name="descuento" id="descuento" placeholder="descuento 40% OFF">
+                        <input type="text" name="descuento" id="descuento" placeholder="descuento 40% OFF" class="control">
                     </div>
                 </div>
                 <div class="form-sell">

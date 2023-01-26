@@ -2,6 +2,8 @@ const { validationResult } = require("express-validator")
 const { writeFileSync } = require("fs")
 const path = require("path")
 const fs = require("fs");
+//const UserModels = require("../models/UserModels.js ")
+//const bcryptjs = require("bcryptjs")
 
 const productosFilePath = path.join(__dirname, "../data/productos.json")
 //  let productos = JSON.parse(fs.readFileSync(productosFilePath, "utf-8"))
@@ -13,7 +15,36 @@ const userController = {
         //res.sendFile(path.join(__dirname,"../views/login.html"))
             res.render("login/login")
             },
-    processLogin:function(req,res){},        
+    processLogin: function(req,res){
+        let ResultValidation = validationResult(req)
+        if(ResultValidation.errors.length > 0){
+            return res.render("login/login", {errors: ResultValidation.mapped(), old: req.body})
+        }else{
+            let archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
+            let users;
+            if(archivoJSON == ""){
+                users=[];
+            }else{
+                users = JSON.parse(archivoJSON)
+            }
+            let usuarioLog
+            for(let i = 0; i < users.length; i++){
+                if (users[i].Correo == req.body.Correo){
+                    if(bcrypt.compareSync(req.body.contra, users[i].contra)){
+                        usuarioLog = users[i];
+                        break;
+                    }
+                }
+            }
+            if(usuarioLog == undefined){
+                return res.render("login/login", {errors: [
+                    {msg: "Credenciales inválidas"}
+                ] })
+            }
+            req.session.usuarioLogueado = usuarioLog;
+            res.render("listas")
+        } 
+    },        
 
     register: function(req, res){
         //res.sendFile(path.join(__dirname,"../views/register.html"))
@@ -124,17 +155,19 @@ const userController = {
     },
        // se hace controller para el post 
     createUser: function(req,res){
-
+        //console.log(req.file.filename)
+        
         let errors = validationResult(req);
-
+        
         if(errors.errors.length > 0){
+            console.log(errors)
             return res.render("register/register", {errors: errors.mapped(), old: req.body})
         }else{
             // guardar usuario
         archivoJSON = fs.readFileSync(usersFilePath, "utf-8")
         users = JSON.parse(archivoJSON);
         let regUsuario = {
-
+            
             id: users[users.length - 1].id +1,
             nombre: req.body.nombre , 
             nombreUsuario: req.body.userName ,
@@ -146,12 +179,13 @@ const userController = {
             picture: req.file.filename, 
             contraseña: req.body.contra , 
             Confircontraseña: req.body.Ccontra 
-
         }
+        
         users.push(regUsuario)
         fs.writeFileSync(usersFilePath, JSON.stringify(this.users, null, " "))
         res.redirect("/users/Usuarios")
         }
+        //console.log(userController.createUser())
         
         /*
         if (errors.isEmpty()){
@@ -238,4 +272,6 @@ const userController = {
 
 }
 
+
+//console.log(userController.createUser())
 module.exports = userController;

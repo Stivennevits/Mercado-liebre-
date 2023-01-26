@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register MercadoLiebre</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
@@ -15,20 +14,49 @@
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
-    <%- include("../partials/head/header.ejs") %>
+ <%- include("../partials/head/header.ejs") %>
     <main class="main-login">
-        <form action="/" method="GET" class="login-form">
+        <form action="/users/Usuarios/login" method="post" class="login-form" >
+        
             <div class="control-formulario">
-                <label for="user-name">Nombre de Usuari@</label>
-                <input type="text" name="user-name" id="user-name" minlength="8" placeholder="Nombre de Usuari@" class="control">
+                <label for="Correo">Correo Electrónico</label>
+                    <input 
+                        type="email"
+                        name="Correo" id="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                        minlength="8" placeholder="abcd@efg.com" 
+                        class=" control <%= locals.errors && errors.Correo ? 'is-invalid' : null %>"
+                        value="<%= locals.old ? old.Correo : null %> " 
+                    >
+                 <% if(locals.errors && errors.Correo) {  %>
+                        
+                    <div class="error-form"> 
+                        <%= errors.Correo.msg %> 
+                     </div>
+                    <% } %>
               </div> 
             
               <div class="control-formulario">
                 <label for="contraseña">contraseña</label> 
-                <input type="password" name="contraseña" minlength="10" placeholder="Elige tu Contraseña" class="control">
+                    <input 
+                        type="password" name="contra" id="contra" 
+                        minlength="10" placeholder="Elige tu Contraseña" 
+                        class=" <%= locals.errors && errors.contra ? 'is-invalid control' : 'control' %>" 
+                    >
+                <% if(locals.errors && errors.contra) {  %>
+                            
+                    <div class="error-form"> 
+                         <%= errors.contra.msg %>  
+                    </div>
+                 <% } %>
               </div> 
               
-              <button type="submit" class="boton-formulario">Enviar</button >
+              
+              <label for="recordame" class="control">Recuerdame </label>
+              <input type="checkbox" name="recordame">
+                <div class="botoncitos">
+                    
+                    <button type="submit" class="boton-formulario">Enviar</button >
+                </div>
 
         </form>
     </main>

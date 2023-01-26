@@ -5,21 +5,19 @@ const path = require('path');
 
 const userController = require("../controllers/userController");
 const uploadFile = require("../middlewares/multerMiddleware")
-
+//// validaciones 
 const validateFormCreateProduct = require("../middlewares/validatorForm/validateCreateProduct")
-const validateRegisterForm = require("../middlewares/validatorForm/validateRegister")
+const validateRegisterForm = require("../middlewares/validatorForm/validateRegister.js")
+const validateLoginForm = require("../middlewares/validatorForm/validateLoginForm.js")
 
 // express validator
 const { body } = require("express-validator")
 
-// validaciones 
-
-
 //formularios
 router.get("/login", userController.login)
-router.post("/login", userController.processLogin)
-router.get("/register", userController.register )
-router.post("/register", userController.createUser)
+router.post("/Usuarios/login", validateLoginForm, userController.processLogin)
+router.get("/register",  userController.register )
+//router.post("/register", userController.createUser)
 //productos
 router.get("/", userController.productos)
 router.get("/detail/vender" , userController.vender)

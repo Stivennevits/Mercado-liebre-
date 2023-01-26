@@ -1,6 +1,6 @@
 [
  {
-  "id": "2",
+  "id": 2,
   "nombre": "chapulin colorado",
   "nombreUsuario": "nocontabanconmiastucia",
   "correo": "abcd@efg.com",
@@ -67,5 +67,89 @@
   "picture": "1674051510698_user.jpg",
   "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
   "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 7,
+  "nombre": "  abcd edfg",
+  "nombreUsuario": "123pormi",
+  "correo": "123pormi@hotmail.com",
+  "fecha": "2006-06-06",
+  "Domicilio": "  inferno 123",
+  "preferencia": "Comprador",
+  "Intereses": [
+   "Electro",
+   "Moda",
+   "Hogar",
+   "Jugueteria",
+   "Vida Sana"
+  ],
+  "picture": "1674234024942_user.png",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 8,
+  "nombre": " araña taca",
+  "nombreUsuario": "tacataca ",
+  "correo": "negro@blanco.com",
+  "fecha": "2011-11-11",
+  "Domicilio": "wwwwwwwwwwwwww",
+  "preferencia": "Comprador",
+  "Intereses": "Electro",
+  "picture": "1674768464235_user.jpg",
+  "contraseña": "rttttttttttttttttt",
+  "Confircontraseña": "tttttttttttttttttttttt"
+ },
+ {
+  "id": 9,
+  "nombre": "    aaaaaaaaaaaaaa ",
+  "nombreUsuario": "     aaaaaaaaaaaaaaaaaaaaaaa ",
+  "correo": "nocontabanconmiastucia@chapulin.com",
+  "fecha": "1111-11-11",
+  "Domicilio": "     aaaaaaaaaaaaaaaaaaaaaaaa ",
+  "preferencia": "Comprador",
+  "Intereses": "Hogar",
+  "picture": "1674768864882_user.png",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 10,
+  "nombre": " wwwwwwwwwwww",
+  "nombreUsuario": "  wwwwwwwwwwww",
+  "correo": "negro@blanco.com",
+  "fecha": "2011-11-11",
+  "Domicilio": "  qqqqqqqqqqqqq",
+  "preferencia": "Comprador",
+  "Intereses": "Hogar",
+  "picture": "1674769054646_user.png",
+  "contraseña": "aaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 11,
+  "nombre": " tttttttttttttt",
+  "nombreUsuario": "  tttttttttttttttttttt",
+  "correo": "abcd@efg.com",
+  "fecha": "2222-02-22",
+  "Domicilio": "  tttttttttttttttttttttt",
+  "preferencia": "Comprador",
+  "Intereses": "Moda",
+  "picture": "1674770657868_user.jpg",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "id": 12,
+  "nombre": " mack ",
+  "nombreUsuario": "     aaaaaaaaaaaaaaaaaaaaaaa",
+  "correo": "nocontabanconmiastucia@chapulin.com",
+  "fecha": "2022-11-11",
+  "Domicilio": "   asasaaaaaaaaa",
+  "preferencia": "Vendedor",
+  "Intereses": "Moda",
+  "picture": "1674772150302_user.png",
+  "contraseña": "aaaaaaaaaaaaaaaaaaaaa",
+  "Confircontraseña": "aaaaaaaaaaaaaaaaaaaaaaaaa"
  }
 ]
