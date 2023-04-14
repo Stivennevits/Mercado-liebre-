@@ -96,5 +96,40 @@
   "precio": "  ",
   "descuento": "",
   "img": "1674158919600_user.png"
+ },
+ {
+  "id": 15,
+  "nombre": "cetrecito",
+  "precio": "5000000",
+  "descuento": "1% off",
+  "img": "1676050267015_user.jpg"
+ },
+ {
+  "id": 16,
+  "nombre": "MacBook Pro 2019asas",
+  "precio": "$1.350.000",
+  "descuento": "5",
+  "img": "1676404241971_user.png"
+ },
+ {
+  "id": 17,
+  "nombre": "aaaaaaaaaaaaa",
+  "precio": "6416456",
+  "descuento": "",
+  "img": "1676404275265_user.jpg"
+ },
+ {
+  "id": 18,
+  "nombre": "eduard",
+  "precio": "1111111111111111111",
+  "descuento": "20% off",
+  "img": "1676745791650_user.jpg"
+ },
+ {
+  "id": 19,
+  "nombre": "john products",
+  "precio": "100000000000000000|",
+  "descuento": "0% off",
+  "img": "1677106106333_user.jpg"
  }
 ]

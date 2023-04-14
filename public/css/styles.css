@@ -10,6 +10,7 @@ body {
   padding: 0%;
 }
 
+
 /*HEADER*/
 
 header {
@@ -279,6 +280,7 @@ footer .copyrigth {
 
 
 /* formulario register*/
+
 .register-form {
   margin: 5%;
   border-radius: 47px;
@@ -789,6 +791,7 @@ footer .copyrigth {
     display: flex;
     color: black;
     padding: 0px;
+    
   }
   .listota{
     justify-content: space-around;

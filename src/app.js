@@ -3,7 +3,7 @@ const express = require("express")
 const path = require("path")
 const methodOverride = require("method-override")
 var logMiddleWare = require("../src/middlewares/logMiddleWare")
-let session = require("express-session")
+var session = require("express-session")
 
 // ************ express() - (don't touch) ************
 const app = express();
